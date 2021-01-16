@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    .presentation {
+        background-image: url("../img/900x1600/01.jpg");
+        background-size: cover;
+        .container {
+            position: relative;
+            height: 100vh;
+            .content {
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translate3d(0, -50%, 0);
+                -moz-transform: translate3d(0, -50%, 0);
+                transform: translate3d(0, -50%, 0);
+                padding: 0;
+                .title {
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "excludedFiles": ["!node_modules", "!dist", "!www"],
+    "hideFiles": ["!node_modules", "!dist", "!www"]
+}
