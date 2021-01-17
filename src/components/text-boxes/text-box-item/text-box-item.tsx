@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'rfs-text-box-item',
@@ -7,12 +7,9 @@ import { Component, h } from '@stencil/core';
 export class TextBoxItem {
   render() {
     return (
-      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-6 sm-margin-b-30">
-        <div class="margin-b-60">
-            <slot></slot>
-        </div>
-      </div>
+      <Host class="col-xs-12 col-sm-6 px-sm-5 py-sm-5 pt-5 pb-0 mb-0">
+        <slot></slot>
+      </Host>
     );
   }
-
 }

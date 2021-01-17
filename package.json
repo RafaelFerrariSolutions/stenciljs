@@ -26,8 +26,8 @@
     "dependencies": {
         "@stencil/core": "^2.0.1",
         "@stencil/sass": "^1.4.1",
-        "@yarnpkg/pnpify": "^2.4.0",
         "bootstrap": "^4.5.3",
+        "bs-components": "^0.1.7",
         "jquery": "^3.5.1",
         "swiper": "^6.4.5"
     },
