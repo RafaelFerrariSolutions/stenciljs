@@ -1,3 +1,11 @@
 rfs-text-box-item {
     --primary-color: #000;
+    .masonry-grid .masonry-grid-item {
+        display: block;
+        width: 19.99%;
+        float: right;
+        vertical-align: top;
+        padding: 0 2px;
+        margin-bottom: 4px;
+    }
 }
