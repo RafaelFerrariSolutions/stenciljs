@@ -1,5 +1,5 @@
 {
-    "name": "stenciljs",
+    "name": "@rfsolutions/stenciljs",
     "version": "0.0.2",
     "description": "Stencil Component Starter",
     "main": "dist/index.cjs.js",
