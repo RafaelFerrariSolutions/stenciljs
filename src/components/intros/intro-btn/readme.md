@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                                          | Type     | Default |
-| -------- | --------- | ---------------------------------------------------- | -------- | ------- |
-| `target` | `target`  | O path de destino do botão (âncora ou URL com HTTP). | `string` | `null`  |
+| Property | Attribute | Description                                 | Type     | Default |
+| -------- | --------- | ------------------------------------------- | -------- | ------- |
+| `target` | `target`  | O path de destino do botão (âncora ou URL). | `string` | `null`  |
 
 
 ----------------------------------------------
