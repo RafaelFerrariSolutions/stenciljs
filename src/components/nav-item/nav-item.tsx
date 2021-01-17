@@ -22,8 +22,8 @@ export class NavItemComponent {
   @Prop() target: string = null;
 
   handleItem(event: Event) {
-    $('rfs-nav-item .nav-item').removeClass('active');
-    $(event.target).parents('.nav-item').addClass('active');
+    $('rfs-nav-item .nav-item a').removeClass('active');
+    $(event.target).parents('.nav-item a').addClass('active');
     
     if (window.innerWidth <= 720) {
       $("rfs-header .navbar .collapse-shadow").trigger("click");

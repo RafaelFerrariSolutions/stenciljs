@@ -74,6 +74,10 @@ export namespace Components {
          */
         "target": string;
     }
+    interface RfsTextBox {
+    }
+    interface RfsTextBoxItem {
+    }
 }
 declare global {
     interface HTMLRfsCarouselTxtElement extends Components.RfsCarouselTxt, HTMLStencilElement {
@@ -124,6 +128,18 @@ declare global {
         prototype: HTMLRfsNavItemElement;
         new (): HTMLRfsNavItemElement;
     };
+    interface HTMLRfsTextBoxElement extends Components.RfsTextBox, HTMLStencilElement {
+    }
+    var HTMLRfsTextBoxElement: {
+        prototype: HTMLRfsTextBoxElement;
+        new (): HTMLRfsTextBoxElement;
+    };
+    interface HTMLRfsTextBoxItemElement extends Components.RfsTextBoxItem, HTMLStencilElement {
+    }
+    var HTMLRfsTextBoxItemElement: {
+        prototype: HTMLRfsTextBoxItemElement;
+        new (): HTMLRfsTextBoxItemElement;
+    };
     interface HTMLElementTagNameMap {
         "rfs-carousel-txt": HTMLRfsCarouselTxtElement;
         "rfs-carousel-txt-item": HTMLRfsCarouselTxtItemElement;
@@ -133,6 +149,8 @@ declare global {
         "rfs-intro-description": HTMLRfsIntroDescriptionElement;
         "rfs-intro-title": HTMLRfsIntroTitleElement;
         "rfs-nav-item": HTMLRfsNavItemElement;
+        "rfs-text-box": HTMLRfsTextBoxElement;
+        "rfs-text-box-item": HTMLRfsTextBoxItemElement;
     }
 }
 declare namespace LocalJSX {
@@ -204,6 +222,10 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface RfsTextBox {
+    }
+    interface RfsTextBoxItem {
+    }
     interface IntrinsicElements {
         "rfs-carousel-txt": RfsCarouselTxt;
         "rfs-carousel-txt-item": RfsCarouselTxtItem;
@@ -213,6 +235,8 @@ declare namespace LocalJSX {
         "rfs-intro-description": RfsIntroDescription;
         "rfs-intro-title": RfsIntroTitle;
         "rfs-nav-item": RfsNavItem;
+        "rfs-text-box": RfsTextBox;
+        "rfs-text-box-item": RfsTextBoxItem;
     }
 }
 export { LocalJSX as JSX };
@@ -227,6 +251,8 @@ declare module "@stencil/core" {
             "rfs-intro-description": LocalJSX.RfsIntroDescription & JSXBase.HTMLAttributes<HTMLRfsIntroDescriptionElement>;
             "rfs-intro-title": LocalJSX.RfsIntroTitle & JSXBase.HTMLAttributes<HTMLRfsIntroTitleElement>;
             "rfs-nav-item": LocalJSX.RfsNavItem & JSXBase.HTMLAttributes<HTMLRfsNavItemElement>;
+            "rfs-text-box": LocalJSX.RfsTextBox & JSXBase.HTMLAttributes<HTMLRfsTextBoxElement>;
+            "rfs-text-box-item": LocalJSX.RfsTextBoxItem & JSXBase.HTMLAttributes<HTMLRfsTextBoxItemElement>;
         }
     }
 }

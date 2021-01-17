@@ -12,8 +12,8 @@ rfs-nav-item {
         float: left;
         position: relative;
         white-space: nowrap;
-        opacity: 0.4;
         a {
+            opacity: 0.4;
             padding: 8px;
             text-decoration: none;
             display: inline-block;
@@ -41,17 +41,19 @@ rfs-nav-item {
             }
         }
         & a:hover::before,
-        &.active a::before {
+        &.active a::before,
+        & a.active::before {
             visibility: visible;
             width: 100%;
         }
-        &:hover,
-        &.active {
+        &:hover a,
+        &.active a,
+        & a.active {
             opacity: 1;
         }
         &.action {
-            opacity: 1;
             a {
+                opacity: 1;
                 color: var(--secondary-color)!important;
                 background: var(--tertiary-color);
                 padding: 7px 22px!important;
@@ -68,7 +70,8 @@ rfs-nav-item {
                 }
             }
             & a:hover::before,
-            &.active a::before {
+            &.active a::before,
+            & a.active::before {
                 visibility: hidden;
                 width: 0;
             }
