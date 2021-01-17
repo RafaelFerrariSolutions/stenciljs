@@ -1,11 +1,14 @@
-:host {
-    display: block;
-    .presentation {
-        background-image: url("../img/900x1600/01.jpg");
+rfs-intro {
+    --image: url('/build/assets/background.jpg');
+    --image-mobile: url('/build/assets/background-rotated.jpg');
+    font-family: Hind, sans-serif;
+    section {
+        background-image: var(--image-mobile);
         background-size: cover;
+        height: 100vh;
         .container {
             position: relative;
-            height: 100vh;
+            height: 100%;
             .content {
                 position: absolute;
                 top: 50%;
@@ -13,13 +16,74 @@
                 -moz-transform: translate3d(0, -50%, 0);
                 transform: translate3d(0, -50%, 0);
                 padding: 0;
-                .title {
-                    font-size: 80px;
-                    font-weight: 700;
-                    line-height: 1.1;
-                    text-transform: uppercase;
-                }
             }
+        }
+    }
+    .btn-theme {
+        position: relative;
+        display: inline-block;
+        line-height: 1.4;
+        text-align: center;
+        background-image: none;
+        border-style: solid;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .btn-theme:hover {
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    }
+    .btn-theme:hover,
+    .btn-theme:focus,
+    .btn-theme.focus {
+        text-decoration: none;
+    }
+    .btn-theme:active,
+    .btn-theme.active {
+        background-image: none;
+        outline: 0;
+    }
+    .btn-theme.disabled,
+    .btn-theme[disabled],
+    fieldset[disabled] .btn-theme {
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: .65;
+        pointer-events: none;
+    }
+    .btn-theme-sm {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 15px 40px;
+    }
+    .btn-white-brd {
+        color: #fff;
+        background: transparent;
+        border-color: #fff;
+        border-width: 2px
+    }
+    .btn-white-brd:hover,
+    .btn-white-brd:focus,
+    .btn-white-brd.focus {
+        color: #515769;
+        background: #fff;
+        border-color: #fff
+    }
+}
+
+@media(min-width: 768px) {
+    rfs-intro {
+        section {
+            background-image: var(--image);
+            background-size: 100% 100%
         }
     }
 }

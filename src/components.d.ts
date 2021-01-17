@@ -37,6 +37,24 @@ export namespace Components {
         "sticky": boolean;
     }
     interface RfsIntro {
+        /**
+          * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
+         */
+        "image": void;
+    }
+    interface RfsIntroBtn {
+        /**
+          * O path de destino do botão (âncora ou URL).
+         */
+        "target": string;
+    }
+    interface RfsIntroDescription {
+    }
+    interface RfsIntroTitle {
+        /**
+          * Define o tamanho do texto (1 a 5).
+         */
+        "fontSize": number;
     }
     interface RfsNavItem {
         /**
@@ -78,6 +96,24 @@ declare global {
         prototype: HTMLRfsIntroElement;
         new (): HTMLRfsIntroElement;
     };
+    interface HTMLRfsIntroBtnElement extends Components.RfsIntroBtn, HTMLStencilElement {
+    }
+    var HTMLRfsIntroBtnElement: {
+        prototype: HTMLRfsIntroBtnElement;
+        new (): HTMLRfsIntroBtnElement;
+    };
+    interface HTMLRfsIntroDescriptionElement extends Components.RfsIntroDescription, HTMLStencilElement {
+    }
+    var HTMLRfsIntroDescriptionElement: {
+        prototype: HTMLRfsIntroDescriptionElement;
+        new (): HTMLRfsIntroDescriptionElement;
+    };
+    interface HTMLRfsIntroTitleElement extends Components.RfsIntroTitle, HTMLStencilElement {
+    }
+    var HTMLRfsIntroTitleElement: {
+        prototype: HTMLRfsIntroTitleElement;
+        new (): HTMLRfsIntroTitleElement;
+    };
     interface HTMLRfsNavItemElement extends Components.RfsNavItem, HTMLStencilElement {
     }
     var HTMLRfsNavItemElement: {
@@ -89,6 +125,9 @@ declare global {
         "rfs-carousel-txt-item": HTMLRfsCarouselTxtItemElement;
         "rfs-header": HTMLRfsHeaderElement;
         "rfs-intro": HTMLRfsIntroElement;
+        "rfs-intro-btn": HTMLRfsIntroBtnElement;
+        "rfs-intro-description": HTMLRfsIntroDescriptionElement;
+        "rfs-intro-title": HTMLRfsIntroTitleElement;
         "rfs-nav-item": HTMLRfsNavItemElement;
     }
 }
@@ -124,6 +163,24 @@ declare namespace LocalJSX {
         "sticky"?: boolean;
     }
     interface RfsIntro {
+        /**
+          * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
+         */
+        "image"?: void;
+    }
+    interface RfsIntroBtn {
+        /**
+          * O path de destino do botão (âncora ou URL).
+         */
+        "target"?: string;
+    }
+    interface RfsIntroDescription {
+    }
+    interface RfsIntroTitle {
+        /**
+          * Define o tamanho do texto (1 a 5).
+         */
+        "fontSize"?: number;
     }
     interface RfsNavItem {
         /**
@@ -144,6 +201,9 @@ declare namespace LocalJSX {
         "rfs-carousel-txt-item": RfsCarouselTxtItem;
         "rfs-header": RfsHeader;
         "rfs-intro": RfsIntro;
+        "rfs-intro-btn": RfsIntroBtn;
+        "rfs-intro-description": RfsIntroDescription;
+        "rfs-intro-title": RfsIntroTitle;
         "rfs-nav-item": RfsNavItem;
     }
 }
@@ -155,6 +215,9 @@ declare module "@stencil/core" {
             "rfs-carousel-txt-item": LocalJSX.RfsCarouselTxtItem & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtItemElement>;
             "rfs-header": LocalJSX.RfsHeader & JSXBase.HTMLAttributes<HTMLRfsHeaderElement>;
             "rfs-intro": LocalJSX.RfsIntro & JSXBase.HTMLAttributes<HTMLRfsIntroElement>;
+            "rfs-intro-btn": LocalJSX.RfsIntroBtn & JSXBase.HTMLAttributes<HTMLRfsIntroBtnElement>;
+            "rfs-intro-description": LocalJSX.RfsIntroDescription & JSXBase.HTMLAttributes<HTMLRfsIntroDescriptionElement>;
+            "rfs-intro-title": LocalJSX.RfsIntroTitle & JSXBase.HTMLAttributes<HTMLRfsIntroTitleElement>;
             "rfs-nav-item": LocalJSX.RfsNavItem & JSXBase.HTMLAttributes<HTMLRfsNavItemElement>;
         }
     }

@@ -4,8 +4,7 @@ import { Component, Host, h } from '@stencil/core';
   tag: 'rfs-carousel-txt-item',
   styleUrl: 'carousel-txt-item.scss',
 })
-export class CarouselTxtItem {
-
+export class CarouselTxtItemComponent {
   render() {
     return (
       <Host class="swiper-slide slide">

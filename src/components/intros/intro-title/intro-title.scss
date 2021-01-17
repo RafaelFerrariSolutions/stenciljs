@@ -1,0 +1,43 @@
+rfs-intro-title {
+    --primary-color: #fff;
+    max-width: 80vw!important;
+    h1 {
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: var(--primary-color)!important;
+        position: relative;
+        &.s-1 {
+            font-size: 1rem;
+        }
+        &.s-2 {
+            font-size: 1.5rem;
+        }
+        &.s-3 {
+            font-size: 2rem;
+        }
+        &.s-4 {
+            font-size: 2.5rem;
+        }
+        &.s-5 {
+            font-size: 3.5rem;
+        }
+        @media(min-width: 720px) {
+            &.s-1 {
+                font-size: 1rem;
+            }
+            &.s-2 {
+                font-size: 2rem;
+            }
+            &.s-3 {
+                font-size: 3rem;
+            }
+            &.s-4 {
+                font-size: 4rem;
+            }
+            &.s-5 {
+                font-size: 5rem;
+            }
+        }
+    }
+}

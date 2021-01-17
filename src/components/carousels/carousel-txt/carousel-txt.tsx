@@ -6,7 +6,7 @@ import Swiper from 'swiper/bundle';
   tag: 'rfs-carousel-txt',
   styleUrl: 'carousel-txt.scss',
 })
-export class CarouselTxt {
+export class CarouselTxtComponent {
   private carousel() {
     $(document).ready(function() {
       new Swiper('.swiper-container', {
