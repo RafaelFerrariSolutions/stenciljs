@@ -11,9 +11,14 @@ export class IntroComponent {
    */
   @Prop() image: void;
 
+  /**
+   * Define a âncora do elemento atual.
+   */
+  @Prop() anchor: string = 'intro';
+
   render() {
     return (
-      <section>
+      <section id={this.anchor}>
         <div class="container">
           <div class="content">
             <slot></slot>

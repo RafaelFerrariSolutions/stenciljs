@@ -38,6 +38,10 @@ export namespace Components {
     }
     interface RfsIntro {
         /**
+          * Define a âncora do elemento atual.
+         */
+        "anchor": string;
+        /**
           * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
          */
         "image": void;
@@ -163,6 +167,10 @@ declare namespace LocalJSX {
         "sticky"?: boolean;
     }
     interface RfsIntro {
+        /**
+          * Define a âncora do elemento atual.
+         */
+        "anchor"?: string;
         /**
           * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
          */
