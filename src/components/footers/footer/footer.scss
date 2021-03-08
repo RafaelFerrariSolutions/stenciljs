@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron');
+rfs-footer {
+    --text-color: #f524bf;
+    --text-gradient-left: #008cb0;
+    --text-gradient-right: #009848;
+    --background-color: black;
+    footer {
+        font-family: 'Orbitron';
+        font-weight: 600;
+        background-color: var(--background-color);
+        div {
+            a,
+            a:hover {
+                color: var(--text-color);
+                background-color: var(--text-color);
+                background-image: linear-gradient(to right, var(--text-gradient-left), var(--text-gradient-right));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 1em;
+            }
+        }
+    }
+}

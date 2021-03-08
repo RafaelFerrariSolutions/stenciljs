@@ -11,20 +11,11 @@ export class IntroTitleComponent {
   @Prop() fontSize: number = 5;
 
   private renderClasses(): string {
-    switch(this.fontSize) {
-      case 1:
-        return 's-1';
-      case 2:
-        return 's-2';
-      case 3:
-        return 's-3';
-      case 4:
-        return 's-4';
-      case 5:
-        return 's-5';
-      default:
-        return 's-5';
+    if (!(this.fontSize in [1,2,3,4,5])) {
+      throw "Invalid font size!";
     }
+
+    return `s-${this.fontSize}`;
   }
 
   render() {

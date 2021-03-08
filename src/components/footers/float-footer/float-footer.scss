@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron');
+rfs-float-footer {
+    --text-color: #f524bf;
+    --text-gradient-left: #008cb0;
+    --text-gradient-right: #009848;
+    --background-color: rgba(0, 0, 0, .75);
+    &>div {
+        font-family: 'Orbitron';
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20em;
+        background-color: var(--background-color);
+        position: fixed;
+        bottom: 2em;
+        left: calc(50% - 10em);
+        a,
+        a:hover {
+            color: var(--text-color);
+            background-color: var(--text-color);
+            background-image: linear-gradient(to right, var(--text-gradient-left), var(--text-gradient-right));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1em;
+        }
+    }
+    &.radius-1>div {
+        border-radius: 5px;
+    }
+    &.radius-2>div {
+        border-radius: 10px;
+    }
+    &.radius-3>div {
+        border-radius: 15px;
+    }
+    &.radius-4>div {
+        border-radius: 20px;
+    }
+    &.radius-5>div {
+        border-radius: 25px;
+    }
+}

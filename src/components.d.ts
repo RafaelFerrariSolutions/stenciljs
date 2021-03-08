@@ -10,6 +10,22 @@ export namespace Components {
     }
     interface RfsCarouselTxtItem {
     }
+    interface RfsFloatFooter {
+        /**
+          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo, usar RGBA  --text-color: para definir cor sólida
+         */
+        "color": void;
+        /**
+          * Define o quão arrendodado será. Escolher entre 1 e 5
+         */
+        "radius": number;
+    }
+    interface RfsFooter {
+        /**
+          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida
+         */
+        "color": void;
+    }
     interface RfsHeader {
         /**
           * Define se a navbar será escura. Caso falso = claro.
@@ -74,6 +90,12 @@ export namespace Components {
          */
         "target": string;
     }
+    interface RfsParallaxImage {
+    }
+    interface RfsSliderAnimated {
+    }
+    interface RfsSliderAnimatedItem {
+    }
     interface RfsTextBox {
     }
     interface RfsTextBoxItem {
@@ -91,6 +113,18 @@ declare global {
     var HTMLRfsCarouselTxtItemElement: {
         prototype: HTMLRfsCarouselTxtItemElement;
         new (): HTMLRfsCarouselTxtItemElement;
+    };
+    interface HTMLRfsFloatFooterElement extends Components.RfsFloatFooter, HTMLStencilElement {
+    }
+    var HTMLRfsFloatFooterElement: {
+        prototype: HTMLRfsFloatFooterElement;
+        new (): HTMLRfsFloatFooterElement;
+    };
+    interface HTMLRfsFooterElement extends Components.RfsFooter, HTMLStencilElement {
+    }
+    var HTMLRfsFooterElement: {
+        prototype: HTMLRfsFooterElement;
+        new (): HTMLRfsFooterElement;
     };
     interface HTMLRfsHeaderElement extends Components.RfsHeader, HTMLStencilElement {
     }
@@ -128,6 +162,24 @@ declare global {
         prototype: HTMLRfsNavItemElement;
         new (): HTMLRfsNavItemElement;
     };
+    interface HTMLRfsParallaxImageElement extends Components.RfsParallaxImage, HTMLStencilElement {
+    }
+    var HTMLRfsParallaxImageElement: {
+        prototype: HTMLRfsParallaxImageElement;
+        new (): HTMLRfsParallaxImageElement;
+    };
+    interface HTMLRfsSliderAnimatedElement extends Components.RfsSliderAnimated, HTMLStencilElement {
+    }
+    var HTMLRfsSliderAnimatedElement: {
+        prototype: HTMLRfsSliderAnimatedElement;
+        new (): HTMLRfsSliderAnimatedElement;
+    };
+    interface HTMLRfsSliderAnimatedItemElement extends Components.RfsSliderAnimatedItem, HTMLStencilElement {
+    }
+    var HTMLRfsSliderAnimatedItemElement: {
+        prototype: HTMLRfsSliderAnimatedItemElement;
+        new (): HTMLRfsSliderAnimatedItemElement;
+    };
     interface HTMLRfsTextBoxElement extends Components.RfsTextBox, HTMLStencilElement {
     }
     var HTMLRfsTextBoxElement: {
@@ -143,12 +195,17 @@ declare global {
     interface HTMLElementTagNameMap {
         "rfs-carousel-txt": HTMLRfsCarouselTxtElement;
         "rfs-carousel-txt-item": HTMLRfsCarouselTxtItemElement;
+        "rfs-float-footer": HTMLRfsFloatFooterElement;
+        "rfs-footer": HTMLRfsFooterElement;
         "rfs-header": HTMLRfsHeaderElement;
         "rfs-intro": HTMLRfsIntroElement;
         "rfs-intro-btn": HTMLRfsIntroBtnElement;
         "rfs-intro-description": HTMLRfsIntroDescriptionElement;
         "rfs-intro-title": HTMLRfsIntroTitleElement;
         "rfs-nav-item": HTMLRfsNavItemElement;
+        "rfs-parallax-image": HTMLRfsParallaxImageElement;
+        "rfs-slider-animated": HTMLRfsSliderAnimatedElement;
+        "rfs-slider-animated-item": HTMLRfsSliderAnimatedItemElement;
         "rfs-text-box": HTMLRfsTextBoxElement;
         "rfs-text-box-item": HTMLRfsTextBoxItemElement;
     }
@@ -157,6 +214,22 @@ declare namespace LocalJSX {
     interface RfsCarouselTxt {
     }
     interface RfsCarouselTxtItem {
+    }
+    interface RfsFloatFooter {
+        /**
+          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo, usar RGBA  --text-color: para definir cor sólida
+         */
+        "color"?: void;
+        /**
+          * Define o quão arrendodado será. Escolher entre 1 e 5
+         */
+        "radius"?: number;
+    }
+    interface RfsFooter {
+        /**
+          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida
+         */
+        "color"?: void;
     }
     interface RfsHeader {
         /**
@@ -222,6 +295,12 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface RfsParallaxImage {
+    }
+    interface RfsSliderAnimated {
+    }
+    interface RfsSliderAnimatedItem {
+    }
     interface RfsTextBox {
     }
     interface RfsTextBoxItem {
@@ -229,12 +308,17 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "rfs-carousel-txt": RfsCarouselTxt;
         "rfs-carousel-txt-item": RfsCarouselTxtItem;
+        "rfs-float-footer": RfsFloatFooter;
+        "rfs-footer": RfsFooter;
         "rfs-header": RfsHeader;
         "rfs-intro": RfsIntro;
         "rfs-intro-btn": RfsIntroBtn;
         "rfs-intro-description": RfsIntroDescription;
         "rfs-intro-title": RfsIntroTitle;
         "rfs-nav-item": RfsNavItem;
+        "rfs-parallax-image": RfsParallaxImage;
+        "rfs-slider-animated": RfsSliderAnimated;
+        "rfs-slider-animated-item": RfsSliderAnimatedItem;
         "rfs-text-box": RfsTextBox;
         "rfs-text-box-item": RfsTextBoxItem;
     }
@@ -245,12 +329,17 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "rfs-carousel-txt": LocalJSX.RfsCarouselTxt & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtElement>;
             "rfs-carousel-txt-item": LocalJSX.RfsCarouselTxtItem & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtItemElement>;
+            "rfs-float-footer": LocalJSX.RfsFloatFooter & JSXBase.HTMLAttributes<HTMLRfsFloatFooterElement>;
+            "rfs-footer": LocalJSX.RfsFooter & JSXBase.HTMLAttributes<HTMLRfsFooterElement>;
             "rfs-header": LocalJSX.RfsHeader & JSXBase.HTMLAttributes<HTMLRfsHeaderElement>;
             "rfs-intro": LocalJSX.RfsIntro & JSXBase.HTMLAttributes<HTMLRfsIntroElement>;
             "rfs-intro-btn": LocalJSX.RfsIntroBtn & JSXBase.HTMLAttributes<HTMLRfsIntroBtnElement>;
             "rfs-intro-description": LocalJSX.RfsIntroDescription & JSXBase.HTMLAttributes<HTMLRfsIntroDescriptionElement>;
             "rfs-intro-title": LocalJSX.RfsIntroTitle & JSXBase.HTMLAttributes<HTMLRfsIntroTitleElement>;
             "rfs-nav-item": LocalJSX.RfsNavItem & JSXBase.HTMLAttributes<HTMLRfsNavItemElement>;
+            "rfs-parallax-image": LocalJSX.RfsParallaxImage & JSXBase.HTMLAttributes<HTMLRfsParallaxImageElement>;
+            "rfs-slider-animated": LocalJSX.RfsSliderAnimated & JSXBase.HTMLAttributes<HTMLRfsSliderAnimatedElement>;
+            "rfs-slider-animated-item": LocalJSX.RfsSliderAnimatedItem & JSXBase.HTMLAttributes<HTMLRfsSliderAnimatedItemElement>;
             "rfs-text-box": LocalJSX.RfsTextBox & JSXBase.HTMLAttributes<HTMLRfsTextBoxElement>;
             "rfs-text-box-item": LocalJSX.RfsTextBoxItem & JSXBase.HTMLAttributes<HTMLRfsTextBoxItemElement>;
         }

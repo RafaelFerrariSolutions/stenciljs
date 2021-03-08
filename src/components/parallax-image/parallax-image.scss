@@ -1,0 +1,12 @@
+rfs-parallax-image {
+    --background-image: none;
+    --min-height: 500px;
+    .parallax-image {
+        background-image: var(--background-image);
+        min-height: var(--min-height);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
