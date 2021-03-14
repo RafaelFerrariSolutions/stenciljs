@@ -63,7 +63,7 @@ export class HeaderComponent {
 
   private getClasses(): string {
     let classes = [];
-    classes.push('navbar navbar-expand-lg');
+    classes.push('navbar navbar-expand-sm');
     
     if (this.dark) {
       classes.push('navbar-dark')

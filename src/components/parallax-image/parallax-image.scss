@@ -1,12 +1,15 @@
 rfs-parallax-image {
     --background-image: none;
-    --min-height: 500px;
     .parallax-image {
         background-image: var(--background-image);
-        min-height: var(--min-height);
         background-attachment: fixed;
-        background-position: center;
+        background-position: top center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        min-height: 35vh;
+        @media(min-width: 720px) {
+            background-size: cover;
+            min-height: 70vh;
+        }
     }
 }

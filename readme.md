@@ -61,7 +61,7 @@ The first step for all three of these strategies is to [publish to NPM](https://
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/stenciljs@current/dist/stenciljs.esm.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script type="module" src='https://unpkg.com/stenciljs@current/dist/stenciljs.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules

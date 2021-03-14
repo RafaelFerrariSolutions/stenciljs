@@ -20,6 +20,14 @@ export namespace Components {
          */
         "radius": number;
     }
+    interface RfsFloatHeader {
+    }
+    interface RfsFloatHeaderItem {
+        /**
+          * Define a âncora do botão.
+         */
+        "target": string;
+    }
     interface RfsFooter {
         /**
           * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida
@@ -120,6 +128,18 @@ declare global {
         prototype: HTMLRfsFloatFooterElement;
         new (): HTMLRfsFloatFooterElement;
     };
+    interface HTMLRfsFloatHeaderElement extends Components.RfsFloatHeader, HTMLStencilElement {
+    }
+    var HTMLRfsFloatHeaderElement: {
+        prototype: HTMLRfsFloatHeaderElement;
+        new (): HTMLRfsFloatHeaderElement;
+    };
+    interface HTMLRfsFloatHeaderItemElement extends Components.RfsFloatHeaderItem, HTMLStencilElement {
+    }
+    var HTMLRfsFloatHeaderItemElement: {
+        prototype: HTMLRfsFloatHeaderItemElement;
+        new (): HTMLRfsFloatHeaderItemElement;
+    };
     interface HTMLRfsFooterElement extends Components.RfsFooter, HTMLStencilElement {
     }
     var HTMLRfsFooterElement: {
@@ -196,6 +216,8 @@ declare global {
         "rfs-carousel-txt": HTMLRfsCarouselTxtElement;
         "rfs-carousel-txt-item": HTMLRfsCarouselTxtItemElement;
         "rfs-float-footer": HTMLRfsFloatFooterElement;
+        "rfs-float-header": HTMLRfsFloatHeaderElement;
+        "rfs-float-header-item": HTMLRfsFloatHeaderItemElement;
         "rfs-footer": HTMLRfsFooterElement;
         "rfs-header": HTMLRfsHeaderElement;
         "rfs-intro": HTMLRfsIntroElement;
@@ -224,6 +246,14 @@ declare namespace LocalJSX {
           * Define o quão arrendodado será. Escolher entre 1 e 5
          */
         "radius"?: number;
+    }
+    interface RfsFloatHeader {
+    }
+    interface RfsFloatHeaderItem {
+        /**
+          * Define a âncora do botão.
+         */
+        "target"?: string;
     }
     interface RfsFooter {
         /**
@@ -309,6 +339,8 @@ declare namespace LocalJSX {
         "rfs-carousel-txt": RfsCarouselTxt;
         "rfs-carousel-txt-item": RfsCarouselTxtItem;
         "rfs-float-footer": RfsFloatFooter;
+        "rfs-float-header": RfsFloatHeader;
+        "rfs-float-header-item": RfsFloatHeaderItem;
         "rfs-footer": RfsFooter;
         "rfs-header": RfsHeader;
         "rfs-intro": RfsIntro;
@@ -330,6 +362,8 @@ declare module "@stencil/core" {
             "rfs-carousel-txt": LocalJSX.RfsCarouselTxt & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtElement>;
             "rfs-carousel-txt-item": LocalJSX.RfsCarouselTxtItem & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtItemElement>;
             "rfs-float-footer": LocalJSX.RfsFloatFooter & JSXBase.HTMLAttributes<HTMLRfsFloatFooterElement>;
+            "rfs-float-header": LocalJSX.RfsFloatHeader & JSXBase.HTMLAttributes<HTMLRfsFloatHeaderElement>;
+            "rfs-float-header-item": LocalJSX.RfsFloatHeaderItem & JSXBase.HTMLAttributes<HTMLRfsFloatHeaderItemElement>;
             "rfs-footer": LocalJSX.RfsFooter & JSXBase.HTMLAttributes<HTMLRfsFooterElement>;
             "rfs-header": LocalJSX.RfsHeader & JSXBase.HTMLAttributes<HTMLRfsHeaderElement>;
             "rfs-intro": LocalJSX.RfsIntro & JSXBase.HTMLAttributes<HTMLRfsIntroElement>;
