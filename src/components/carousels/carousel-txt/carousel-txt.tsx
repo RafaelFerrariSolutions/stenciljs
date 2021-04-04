@@ -1,5 +1,4 @@
 import { Component, h } from '@stencil/core';
-import $ from 'jquery';
 import Swiper from 'swiper/bundle';
 
 @Component({
@@ -21,19 +20,6 @@ export class CarouselTxtComponent {
   }
 
   render() {
-
-    // return (
-    //   <div class="transition-box">
-    //     <div class="transition left-top"></div>
-    //     <div class="transition right-top"></div>
-    //     <div class="transition left-bottom"></div>
-    //     <div class="transition right-bottom"></div>
-    //     <div class="fixed">
-    //       <slot></slot>
-    //     </div>
-    //   </div>
-    // );
-
     this.carousel();
 
     return (

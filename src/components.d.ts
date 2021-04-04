@@ -7,8 +7,17 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface RfsBadgeTitle {
+        /**
+          * Background color of component
+         */
         "bgColor": string;
+        /**
+          * Text color of component
+         */
         "color": string;
+        /**
+          * Define a id to this component, used for style her
+         */
         "styleId": string;
     }
     interface RfsCarouselTxt {
@@ -259,8 +268,17 @@ declare global {
 }
 declare namespace LocalJSX {
     interface RfsBadgeTitle {
+        /**
+          * Background color of component
+         */
         "bgColor"?: string;
+        /**
+          * Text color of component
+         */
         "color"?: string;
+        /**
+          * Define a id to this component, used for style her
+         */
         "styleId"?: string;
     }
     interface RfsCarouselTxt {

@@ -5,16 +5,27 @@ import { Component, Prop, h } from '@stencil/core';
   styleUrl: 'badge-title.scss',
 })
 export class BadgeTitleComponent {
+  /**
+   * Define a id to this component, used for style her
+   */
   @Prop() styleId: string
-  @Prop() bgColor: string = "#fff"
+
+  /**
+   * Text color of component
+   */
   @Prop() color: string = "#000"
+
+  /**
+   * Background color of component
+   */
+  @Prop() bgColor: string = "#FFF"
 
   componentDidLoad() {
     if (!this.styleId) return
 
-    let element = document.querySelector<HTMLElement>(`#${this.styleId}`)
-    element.style.color = this.color
-    element.style.backgroundColor = this.bgColor
+    let element = $(`#${this.styleId}`)
+    element.css('color', this.color)
+    element.css('backgroundColor', this.bgColor)
   }
 
   render() {
