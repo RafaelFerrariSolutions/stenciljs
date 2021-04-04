@@ -1,5 +1,6 @@
 import { Component, h } from '@stencil/core';
 import Swiper from 'swiper/bundle';
+import $ from 'jquery';
 
 @Component({
   tag: 'rfs-carousel-txt',

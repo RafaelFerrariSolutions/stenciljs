@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
+import $ from 'jquery';
 
 @Component({
   tag: 'rfs-badge-title',
