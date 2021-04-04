@@ -1,4 +1,9 @@
 rfs-float-header-item {
     padding: 0!important;
     margin: 0!important;
+    li {
+        a {
+            text-transform: uppercase;
+        }
+    }
 }

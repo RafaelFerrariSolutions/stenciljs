@@ -9,6 +9,7 @@ export class FloatHeaderItemComponent {
    * Define a âncora do botão.
    */
   @Prop() target: string = '#';
+ 
 
   render() {
     return (
@@ -19,5 +20,5 @@ export class FloatHeaderItemComponent {
       </Host>
     );
   }
-
 }
+

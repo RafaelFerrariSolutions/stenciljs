@@ -17,49 +17,60 @@
 </head>
 
 <body>
-    <!-- <rfs-header>
-        <rfs-nav-item>HOME</rfs-nav-item>
-        <rfs-nav-item>WHY US?</rfs-nav-item>
-        <rfs-nav-item>PROJECTS</rfs-nav-item>
-        <rfs-nav-item>SERVICES</rfs-nav-item>
-        <rfs-nav-item>CONTACT</rfs-nav-item>
-    </rfs-header> -->
+    <div id="intro">
+        <rfs-float-header id="header" fixed="false">
+            <rfs-float-header-item>Referência</rfs-float-header-item>
+            <rfs-float-header-item>Projetos</rfs-float-header-item>
+            <rfs-float-header-item>Serviços</rfs-float-header-item>
+            <rfs-float-header-item>Contato</rfs-float-header-item>
+        </rfs-float-header>
+        <rfs-parallax-image class="intro-parallax"></rfs-parallax-image>
+        <rfs-title style="--background-color: "></rfs-title>
+    </div>
 
-    <rfs-float-header>
-        <rfs-float-header-item>PORQUE RFS</rfs-float-header-item>
-        <rfs-float-header-item>PROJETOS</rfs-float-header-item>
-        <rfs-float-header-item>SERVIÇOS</rfs-float-header-item>
-        <rfs-float-header-item>CONTATO</rfs-float-header-item>
-    </rfs-float-header>
-    <rfs-parallax-image></rfs-parallax-image>
+    <rfs-parallax-image-vertical-repeat>
+        <div class="text-primary px-3">
+            <h3 class="my-4"><span class="badge badge-secondary" style="background-color: #B3B800;">Por que a RFS</span></h3>
 
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
-    <p>TESTE</p>
+            <h4>Venda mais, anuncie melhor</h4>
+            <h6>Com um site profissional, você pode e deve vinculá-lo ao seus anúncios de propaganda para atrair mais clientes.</h6>
+            <h6>É simples, todos procuram alguém de confiança, e o site transmite a mensagem necessária.</h6>
+
+            <h4>Seja melhor que seus concorrentes</h4>
+            <h6>Suponhamos que você tem um concorrente direto que não tem site, nem dados importantes de contato públicos na internet.</h6>
+            <h6>Sabemos que o cliente dará prioridade para o que tiver mais FACILIDADE de contato.</h6>
+            <h4>Por que nos escolher?</h4>
+            <h6>Trabalhamos com seriedade, organização e profissionalismo. Nosso principal objetivo é o desenvolvimento dos nossos clientes.</h6>
+            <h6>Por isso, oferecemos produtos que possuam um retorno significativo, buscando sempre a prosperidade.</h6>
+            <h4>Profissionais capacitados</h4>
+            <h6>RF Solutions possui colaboradores com ampla experiência na área. Possuem formação em análise e desenvolvimento, estão se especializando com graduação superior, têm uma visão diferente de negócio digital e do novo mercado.</h6>
+            <h6 class="mt-2">VENDEMOS SOLUÇÃO E QUALIDADE.</h6>
+        </div>
+    </rfs-parallax-image-vertical-repeat>
+
+    <rfs-badge-title style-id="projects" color="#fff" bg-color="#0FF">Projetos</rfs-badge-title>
 
     <style>
-        rfs-parallax-image {
+        * {
+            text-align: center;
+        }
+        
+        .intro-parallax {
             --background-image: url(/build/assets/img/intro-background.jpg);
         }
         
-        rfs-parallax-image .parallax-image {
+        #intro .parallax-image {
             height: 100vh;
         }
         
         @media(max-width: 720px) {
-            rfs-parallax-image .parallax-image {
-                height: 36.5vh;
+            .intro-parallax .parallax-image {
+                --background-image: url(/build/assets/img/intro-background-mobile.jpg);
             }
+        }
+        
+        rfs-parallax-image-vertical-repeat {
+            --background-image: url(/build/assets/img/description-background.jpg);
         }
     </style>
 

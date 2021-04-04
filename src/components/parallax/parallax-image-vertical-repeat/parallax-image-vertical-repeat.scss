@@ -1,0 +1,15 @@
+rfs-parallax-image-vertical-repeat {
+    --background-image: none;
+    .parallax-image {
+        background-image: var(--background-image);
+        background-attachment: fixed;
+        background-position: top center;
+        background-repeat: repeat-x;
+        background-size: contain;
+        min-height: 35vh;
+        @media(min-width: 720px) {
+            background-size: cover;
+            min-height: 70vh;
+        }
+    }
+}

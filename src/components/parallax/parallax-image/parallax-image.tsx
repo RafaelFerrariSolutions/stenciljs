@@ -9,7 +9,9 @@ export class ParallaxImage {
   render() {
     return (
       <Host>
-        <div class="parallax-image"></div>
+        <div class="parallax-image">
+          <slot></slot>
+        </div>
       </Host>
     );
   }
