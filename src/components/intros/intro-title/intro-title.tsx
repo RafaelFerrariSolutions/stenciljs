@@ -6,12 +6,12 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class IntroTitleComponent {
   /**
-   * Define o tamanho do texto (1 a 5).
+   * Define o tamanho do texto (1 a 4).
    */
   @Prop() fontSize: number = 5;
 
   private renderClasses(): string {
-    if (!(this.fontSize in [1,2,3,4,5])) {
+    if (!(this.fontSize in [1,2,3,4,5,6])) {
       throw "Invalid font size!";
     }
 

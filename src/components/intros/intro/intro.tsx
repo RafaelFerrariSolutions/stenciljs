@@ -12,7 +12,7 @@ export class IntroComponent {
   @Prop() image: void;
 
   /**
-   * Define a âncora do elemento atual.
+   * Define a âncora do botão de ação.
    */
   @Prop() anchor: string = 'intro';
 

@@ -1,29 +1,29 @@
-import { Component, Prop, h } from '@stencil/core';
-import $ from 'jquery';
+import { Component, Prop, h } from '@stencil/core'
+import $ from 'jquery'
 
 @Component({
   tag: 'rfs-badge-title',
   styleUrl: 'badge-title.scss',
 })
 export class BadgeTitleComponent {
-  /**
-   * Define a id to this component, used for style her
-   */
   @Prop() styleId: string
-
-  /**
-   * Text color of component
-   */
   @Prop() color: string = "#000"
-
-  /**
-   * Background color of component
-   */
   @Prop() bgColor: string = "#FFF"
 
-  componentDidLoad() {
-    if (!this.styleId) return
+  uuid() {
+    let dateTime = new Date().getTime()
+    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
+        let random = (dateTime + Math.random() * 16) % 16 | 0;
+        dateTime = Math.floor(dateTime / 16);
+        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
+    })
+  }
 
+  componentWillLoad() {
+    this.uuid()
+  }
+
+  componentDidLoad() {
     let element = $(`#${this.styleId}`)
     element.css('color', this.color)
     element.css('backgroundColor', this.bgColor)

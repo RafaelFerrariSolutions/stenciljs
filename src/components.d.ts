@@ -7,17 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface RfsBadgeTitle {
-        /**
-          * Background color of component
-         */
         "bgColor": string;
-        /**
-          * Text color of component
-         */
         "color": string;
-        /**
-          * Define a id to this component, used for style her
-         */
         "styleId": string;
     }
     interface RfsCarouselTxt {
@@ -25,19 +16,14 @@ export namespace Components {
     interface RfsCarouselTxtItem {
     }
     interface RfsFloatFooter {
-        /**
-          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo, usar RGBA  --text-color: para definir cor sólida
-         */
-        "color": void;
-        /**
-          * Define o quão arrendodado será. Escolher entre 1 e 5
-         */
+        "bgColor": string;
+        "color": string;
         "radius": number;
+        "styleId": string;
+        "textGradientLeft": string;
+        "textGradientRight": string;
     }
     interface RfsFloatHeader {
-        /**
-          * Define se é fixa no topo ou não. false 0 = não
-         */
         "fixed": boolean;
     }
     interface RfsFloatHeaderItem {
@@ -47,10 +33,11 @@ export namespace Components {
         "target": string;
     }
     interface RfsFooter {
-        /**
-          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida
-         */
-        "color": void;
+        "bgColor": string;
+        "color": string;
+        "styleId": string;
+        "textGradientLeft": string;
+        "textGradientRight": string;
     }
     interface RfsHeader {
         /**
@@ -80,7 +67,7 @@ export namespace Components {
     }
     interface RfsIntro {
         /**
-          * Define a âncora do elemento atual.
+          * Define a âncora do botão de ação.
          */
         "anchor": string;
         /**
@@ -98,7 +85,7 @@ export namespace Components {
     }
     interface RfsIntroTitle {
         /**
-          * Define o tamanho do texto (1 a 5).
+          * Define o tamanho do texto (1 a 4).
          */
         "fontSize": number;
     }
@@ -268,17 +255,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface RfsBadgeTitle {
-        /**
-          * Background color of component
-         */
         "bgColor"?: string;
-        /**
-          * Text color of component
-         */
         "color"?: string;
-        /**
-          * Define a id to this component, used for style her
-         */
         "styleId"?: string;
     }
     interface RfsCarouselTxt {
@@ -286,19 +264,14 @@ declare namespace LocalJSX {
     interface RfsCarouselTxtItem {
     }
     interface RfsFloatFooter {
-        /**
-          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo, usar RGBA  --text-color: para definir cor sólida
-         */
-        "color"?: void;
-        /**
-          * Define o quão arrendodado será. Escolher entre 1 e 5
-         */
+        "bgColor"?: string;
+        "color"?: string;
         "radius"?: number;
+        "styleId"?: string;
+        "textGradientLeft"?: string;
+        "textGradientRight"?: string;
     }
     interface RfsFloatHeader {
-        /**
-          * Define se é fixa no topo ou não. false 0 = não
-         */
         "fixed"?: boolean;
     }
     interface RfsFloatHeaderItem {
@@ -308,10 +281,11 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface RfsFooter {
-        /**
-          * Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida
-         */
-        "color"?: void;
+        "bgColor"?: string;
+        "color"?: string;
+        "styleId"?: string;
+        "textGradientLeft"?: string;
+        "textGradientRight"?: string;
     }
     interface RfsHeader {
         /**
@@ -341,7 +315,7 @@ declare namespace LocalJSX {
     }
     interface RfsIntro {
         /**
-          * Define a âncora do elemento atual.
+          * Define a âncora do botão de ação.
          */
         "anchor"?: string;
         /**
@@ -359,7 +333,7 @@ declare namespace LocalJSX {
     }
     interface RfsIntroTitle {
         /**
-          * Define o tamanho do texto (1 a 5).
+          * Define o tamanho do texto (1 a 4).
          */
         "fontSize"?: number;
     }
