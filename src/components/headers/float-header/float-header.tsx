@@ -8,8 +8,8 @@ export class FloatHeaderComponent {
   @Prop() fixed: boolean = false;
 
   fixednav() {
-    if (this.fixed == false) {
-      const header = document.querySelector('#header')
+    if (!this.fixed) {
+      const header = document.querySelector('rfs-float-header')
       const headerClassList = header.classList
 
       window.addEventListener('scroll', () => {
