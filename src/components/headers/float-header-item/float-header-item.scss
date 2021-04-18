@@ -1,9 +1,22 @@
 rfs-float-header-item {
+    --color: white;
+    --bgColor: rgba(255, 255, 255, .15);
+    --bgColorHover: var(--bgColor);
     padding: 0!important;
     margin: 0!important;
     li {
         a {
             text-transform: uppercase;
         }
+    }
+    .nav-link {
+        background-color: var(--bgColor);
+        color: var(--color);
+    }
+    .nav-link:hover {
+        background-color: var(--bgColorHover);
+        color: var(--color);
+        border: 1px solid var(--color);
+        box-shadow: 0 0 5px var(--color);
     }
 }

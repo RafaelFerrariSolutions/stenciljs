@@ -24,6 +24,7 @@ export class FloatHeaderComponent {
     }
   }
 
+
   render() {
     this.fixednav()
     return (

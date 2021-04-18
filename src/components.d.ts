@@ -27,9 +27,10 @@ export namespace Components {
         "fixed": boolean;
     }
     interface RfsFloatHeaderItem {
-        /**
-          * Define a âncora do botão.
-         */
+        "bgColor": string;
+        "bgColorHover": string;
+        "color": string;
+        "styleId": string;
         "target": string;
     }
     interface RfsFooter {
@@ -66,28 +67,23 @@ export namespace Components {
         "sticky": boolean;
     }
     interface RfsIntro {
-        /**
-          * Define a âncora do botão de ação.
-         */
         "anchor": string;
-        /**
-          * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
-         */
         "image": void;
     }
     interface RfsIntroBtn {
-        /**
-          * O path de destino do botão (âncora ou URL).
-         */
+        "bgColor": string;
+        "color": string;
+        "styleId": string;
         "target": string;
     }
     interface RfsIntroDescription {
+        "color": string;
+        "styleId": string;
     }
     interface RfsIntroTitle {
-        /**
-          * Define o tamanho do texto (1 a 4).
-         */
+        "color": string;
         "fontSize": number;
+        "styleId": string;
     }
     interface RfsNavItem {
         /**
@@ -275,9 +271,10 @@ declare namespace LocalJSX {
         "fixed"?: boolean;
     }
     interface RfsFloatHeaderItem {
-        /**
-          * Define a âncora do botão.
-         */
+        "bgColor"?: string;
+        "bgColorHover"?: string;
+        "color"?: string;
+        "styleId"?: string;
         "target"?: string;
     }
     interface RfsFooter {
@@ -314,28 +311,23 @@ declare namespace LocalJSX {
         "sticky"?: boolean;
     }
     interface RfsIntro {
-        /**
-          * Define a âncora do botão de ação.
-         */
         "anchor"?: string;
-        /**
-          * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
-         */
         "image"?: void;
     }
     interface RfsIntroBtn {
-        /**
-          * O path de destino do botão (âncora ou URL).
-         */
+        "bgColor"?: string;
+        "color"?: string;
+        "styleId"?: string;
         "target"?: string;
     }
     interface RfsIntroDescription {
+        "color"?: string;
+        "styleId"?: string;
     }
     interface RfsIntroTitle {
-        /**
-          * Define o tamanho do texto (1 a 4).
-         */
+        "color"?: string;
         "fontSize"?: number;
+        "styleId"?: string;
     }
     interface RfsNavItem {
         /**

@@ -6,14 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   assetsDirs: ['assets'],
 })
 export class IntroComponent {
-  /**
-   * Use as variáveis CSS --image e --image-mobile para alterar o background-image.
-   */
   @Prop() image: void;
-
-  /**
-   * Define a âncora do botão de ação.
-   */
   @Prop() anchor: string = 'intro';
 
   render() {
