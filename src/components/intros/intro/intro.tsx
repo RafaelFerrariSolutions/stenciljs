@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, Host, h } from '@stencil/core';
 import $ from 'jquery'
 
 @Component({
@@ -9,9 +9,9 @@ import $ from 'jquery'
 export class IntroComponent {
   @Prop() image: void;
   @Prop() anchor: string = 'intro';
-  @Prop() styleId: string
-  @Prop() imgDesk: string = ""
-  @Prop() imgMobile: string = ""
+  @Prop() styleId: string;
+  @Prop() imgDesk: string = "";
+  @Prop() imgMobile: string = "";
 
 
   uuid() {
@@ -35,13 +35,15 @@ export class IntroComponent {
 
   render() {
     return (
-      <section id={this.anchor} >
-        <div class="container" id={this.styleId}  >
-          <div class="content">
-            <slot></slot>
+      <Host id={this.styleId}>
+        <section id={this.anchor} >
+          <div class="container">
+            <div class="content">
+              <slot></slot>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Host>
     );
   }
 
