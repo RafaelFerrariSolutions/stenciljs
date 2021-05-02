@@ -6,20 +6,13 @@ import $ from 'jquery';
   styleUrl: 'nav-item.scss',
 })
 export class NavItemComponent {
-  /**
-   * Define se o nav-item está ativo no momento
-   */
   @Prop() active: boolean = false;
-
-  /**
-   * Define se é um botão de ação. 
-   */
   @Prop() action: boolean = false;
-
-  /**
-   * Define a âncora do botão.
-   */
   @Prop() target: string = null;
+  @Prop() styleId: string;
+  @Prop() color: string = "white";
+  @Prop() actionButtonColor: string = "white";
+  @Prop() effectColor: string = "#f8224";
 
   handleItem(event: Event) {
     $('rfs-nav-item .nav-item a').removeClass('active');
@@ -77,9 +70,30 @@ export class NavItemComponent {
     }
   }
 
+  uuid() {
+    let dateTime = new Date().getTime()
+    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
+        let random = (dateTime + Math.random() * 16) % 16 | 0;
+        dateTime = Math.floor(dateTime / 16);
+        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
+    })
+  }
+
+  componentWillLoad() {
+    this.uuid()
+  }
+
+  componentDidLoad() {
+    let element = $(`#${this.styleId}`)
+    element.css('--primary-color', this.color)
+    element.css('--secondary-color', this.actionButtonColor)
+    element.css('--tertiary-color', this.effectColor)
+
+  }
+
   render() {
     return (
-      <li class={this.getClasses()}>
+      <li class={this.getClasses()} id={this.styleId}>
         <a onClick={this.handleItem} class="nav-link" href={this.getHref()} target={this.getTarget()}>
           <slot></slot>
         </a>

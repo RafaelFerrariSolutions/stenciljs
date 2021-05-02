@@ -1,7 +1,7 @@
 rfs-header {
-    --primary-color: rgba(6, 12, 34, 0.98);
+    --background-color: rgba(6, 12, 34, 0.98);
     .navbar {
-        background: var(--primary-color);
+        background: var(--background-color);
         height: 70px;
         padding: 15px 0;
         &,
@@ -23,7 +23,7 @@ rfs-header {
         }
         .navbar-collapse {
             &.show {
-                background: var(--primary-color);
+                background: var(--background-color);
                 z-index: 3;
             }
         }
@@ -33,7 +33,7 @@ rfs-header {
             width: 100vw;
             top: 0;
             left: 0;
-            background: var(--primary-color);
+            background: var(--background-color);
             opacity: .8;
             display: none;
             z-index: 2;

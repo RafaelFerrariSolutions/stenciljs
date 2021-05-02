@@ -41,34 +41,20 @@ export namespace Components {
         "textGradientRight": string;
     }
     interface RfsHeader {
-        /**
-          * Define se a navbar será escura. Caso falso = claro.
-         */
-        "dark": boolean;
-        /**
-          * Define se será fixa no topo sem ocupar espaço (Ao usar scroll de tela)
-         */
+        "bgColor": string;
         "fixed": boolean;
-        /**
-          * Path (caminho) da logo
-         */
         "logo": string;
-        /**
-          * Referente menu do mobile. Caso falso, menu virá da esquerda para a direita.
-         */
         "rtl": boolean;
-        /**
-          * Define se a navbar será transparente no topo da página.
-         */
         "smoothTop": boolean;
-        /**
-          * Define se será fixa no topo ocupando espaço (Ao usar scroll de tela)
-         */
         "sticky": boolean;
+        "styleId": string;
     }
     interface RfsIntro {
         "anchor": string;
         "image": void;
+        "imgDesk": string;
+        "imgMobile": string;
+        "styleId": string;
     }
     interface RfsIntroBtn {
         "bgColor": string;
@@ -86,30 +72,36 @@ export namespace Components {
         "styleId": string;
     }
     interface RfsNavItem {
-        /**
-          * Define se é um botão de ação.
-         */
         "action": boolean;
-        /**
-          * Define se o nav-item está ativo no momento
-         */
+        "actionButtonColor": string;
         "active": boolean;
-        /**
-          * Define a âncora do botão.
-         */
+        "color": string;
+        "effectColor": string;
+        "styleId": string;
         "target": string;
     }
     interface RfsParallaxImage {
+        "deskImage": string;
+        "mobileImage": string;
+        "styleId": string;
     }
     interface RfsParallaxImageVerticalRepeat {
+        "deskImage": string;
+        "mobileImage": string;
+        "styleId": string;
     }
     interface RfsSliderAnimated {
     }
     interface RfsSliderAnimatedItem {
     }
     interface RfsTextBox {
+        "bgColor": string;
+        "styleId": string;
     }
     interface RfsTextBoxItem {
+        "color": string;
+        "styleId": string;
+        "titleColor": string;
     }
 }
 declare global {
@@ -285,34 +277,20 @@ declare namespace LocalJSX {
         "textGradientRight"?: string;
     }
     interface RfsHeader {
-        /**
-          * Define se a navbar será escura. Caso falso = claro.
-         */
-        "dark"?: boolean;
-        /**
-          * Define se será fixa no topo sem ocupar espaço (Ao usar scroll de tela)
-         */
+        "bgColor"?: string;
         "fixed"?: boolean;
-        /**
-          * Path (caminho) da logo
-         */
         "logo"?: string;
-        /**
-          * Referente menu do mobile. Caso falso, menu virá da esquerda para a direita.
-         */
         "rtl"?: boolean;
-        /**
-          * Define se a navbar será transparente no topo da página.
-         */
         "smoothTop"?: boolean;
-        /**
-          * Define se será fixa no topo ocupando espaço (Ao usar scroll de tela)
-         */
         "sticky"?: boolean;
+        "styleId"?: string;
     }
     interface RfsIntro {
         "anchor"?: string;
         "image"?: void;
+        "imgDesk"?: string;
+        "imgMobile"?: string;
+        "styleId"?: string;
     }
     interface RfsIntroBtn {
         "bgColor"?: string;
@@ -330,30 +308,36 @@ declare namespace LocalJSX {
         "styleId"?: string;
     }
     interface RfsNavItem {
-        /**
-          * Define se é um botão de ação.
-         */
         "action"?: boolean;
-        /**
-          * Define se o nav-item está ativo no momento
-         */
+        "actionButtonColor"?: string;
         "active"?: boolean;
-        /**
-          * Define a âncora do botão.
-         */
+        "color"?: string;
+        "effectColor"?: string;
+        "styleId"?: string;
         "target"?: string;
     }
     interface RfsParallaxImage {
+        "deskImage"?: string;
+        "mobileImage"?: string;
+        "styleId"?: string;
     }
     interface RfsParallaxImageVerticalRepeat {
+        "deskImage"?: string;
+        "mobileImage"?: string;
+        "styleId"?: string;
     }
     interface RfsSliderAnimated {
     }
     interface RfsSliderAnimatedItem {
     }
     interface RfsTextBox {
+        "bgColor"?: string;
+        "styleId"?: string;
     }
     interface RfsTextBoxItem {
+        "color"?: string;
+        "styleId"?: string;
+        "titleColor"?: string;
     }
     interface IntrinsicElements {
         "rfs-badge-title": RfsBadgeTitle;

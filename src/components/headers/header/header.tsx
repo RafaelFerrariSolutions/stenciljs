@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, Host, h } from '@stencil/core';
 import $ from 'jquery';
 
 @Component({
@@ -7,35 +7,13 @@ import $ from 'jquery';
   assetsDirs: ['media'],
 })
 export class HeaderComponent {
-  /**
-   * Define se a navbar será escura. Caso falso = claro.
-   */
-  @Prop() dark: boolean = false;
-
-  /**
-   * Define se a navbar será transparente no topo da página.
-   */
   @Prop() smoothTop: boolean = false;
-
-  /**
-   * Define se será fixa no topo sem ocupar espaço (Ao usar scroll de tela)
-   */
   @Prop() fixed: boolean = false;
-
-  /**
-   * Define se será fixa no topo ocupando espaço (Ao usar scroll de tela)
-   */
   @Prop() sticky: boolean = false;
-
-  /**
-   * Referente menu do mobile. Caso falso, menu virá da esquerda para a direita. 
-   */
   @Prop() rtl: boolean = false;
-
-  /**
-   * Path (caminho) da logo
-   */
   @Prop() logo: string = null;
+  @Prop() bgColor: string = "rgba(6, 12, 34, 0.98)";
+  @Prop() styleId: string;
 
   toggleNavbar(ev: Event) {
     ev.preventDefault();
@@ -65,9 +43,6 @@ export class HeaderComponent {
     let classes = [];
     classes.push('navbar navbar-expand-sm');
     
-    if (this.dark) {
-      classes.push('navbar-dark')
-    }
 
     if (this.smoothTop) {
       classes.push('bg-transparent')
@@ -99,27 +74,47 @@ export class HeaderComponent {
       <img src={this.logo} />
     )
   }
+ 
+  uuid() {
+    let dateTime = new Date().getTime()
+    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
+        let random = (dateTime + Math.random() * 16) % 16 | 0;
+        dateTime = Math.floor(dateTime / 16);
+        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
+    })
+  }
+
+  componentWillLoad() {
+    this.uuid()
+  }
+
+  componentDidLoad() {
+    let element = $(`#${this.styleId}`)
+    element.css('--background-color', this.bgColor)
+  }
 
   render() {
     return (
-      <nav class={this.getClasses()}>
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            {this.getBrand()}
-          </a>
-          <button onClick={this.toggleNavbar} class="navbar-toggler" type="button" >
-            <span class="fa fa-bars"></span>
-          </button>
-          
-          <div class="collapse-shadow" onClick={this.toggleNavbar}></div>
+      <Host id={this.styleId}>
+        <nav class={this.getClasses()}>
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              {this.getBrand()}
+            </a>
+            <button onClick={this.toggleNavbar} class="navbar-toggler" type="button" >
+              <span class="fa fa-bars"></span>
+            </button>
+            
+            <div class="collapse-shadow" onClick={this.toggleNavbar}></div>
 
-          <div class="collapse navbar-collapse" id="rfs-header">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <slot></slot>
-            </ul>
+            <div class="collapse navbar-collapse" id="rfs-header">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <slot></slot>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </Host>
     );
   }
 }
