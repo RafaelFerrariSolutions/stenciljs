@@ -1,19 +1,20 @@
 import { Component, Prop, Host, h } from '@stencil/core';
 import $ from 'jquery';
+import { uuid  } from '../../../utils/utils'
 
 @Component({
   tag: 'rfs-header',
   styleUrl: 'header.scss',
   assetsDirs: ['media'],
 })
-export class HeaderComponent {
+export class Header {
+  @Prop() styleId: string
   @Prop() smoothTop: boolean = false;
   @Prop() fixed: boolean = false;
   @Prop() sticky: boolean = false;
   @Prop() rtl: boolean = false;
   @Prop() logo: string = null;
   @Prop() bgColor: string = "rgba(6, 12, 34, 0.98)";
-  @Prop() styleId: string;
 
   toggleNavbar(ev: Event) {
     ev.preventDefault();
@@ -75,18 +76,9 @@ export class HeaderComponent {
     )
   }
  
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-        let random = (dateTime + Math.random() * 16) % 16 | 0;
-        dateTime = Math.floor(dateTime / 16);
-        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
-  }
+    this.styleId = uuid()
+    }
 
   componentDidLoad() {
     let element = $(`#${this.styleId}`)

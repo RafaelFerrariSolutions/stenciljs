@@ -6,14 +6,26 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ComponenteDeTeste {
+        "styleId": string;
+    }
     interface RfsBadgeTitle {
         "bgColor": string;
         "color": string;
         "styleId": string;
     }
     interface RfsCarouselTxt {
+        "styleId": string;
     }
     interface RfsCarouselTxtItem {
+        "styleId": string;
+    }
+    interface RfsContactSection {
+        "color": string;
+        "logoImg": string;
+        "profileImg": string;
+        "rtl": boolean;
+        "styleId": string;
     }
     interface RfsFloatFooter {
         "bgColor": string;
@@ -25,6 +37,7 @@ export namespace Components {
     }
     interface RfsFloatHeader {
         "fixed": boolean;
+        "styleId": string;
     }
     interface RfsFloatHeaderItem {
         "bgColor": string;
@@ -40,6 +53,15 @@ export namespace Components {
         "textGradientLeft": string;
         "textGradientRight": string;
     }
+    interface RfsGenericSection {
+        "bgColor": string;
+        "styleId": string;
+    }
+    interface RfsGenericSectionItem {
+        "color": string;
+        "image": string;
+        "styleId": string;
+    }
     interface RfsHeader {
         "bgColor": string;
         "fixed": boolean;
@@ -51,7 +73,6 @@ export namespace Components {
     }
     interface RfsIntro {
         "anchor": string;
-        "image": void;
         "imgDesk": string;
         "imgMobile": string;
         "styleId": string;
@@ -90,6 +111,18 @@ export namespace Components {
         "mobileImage": string;
         "styleId": string;
     }
+    interface RfsProjectsSection {
+        "bgBottom": string;
+        "bgProject": string;
+        "bgTop": string;
+        "descriptionColor": string;
+        "myLogo": string;
+        "project": string;
+        "projectColor": string;
+        "projectImage": string;
+        "rtl": boolean;
+        "styleId": string;
+    }
     interface RfsSliderAnimated {
     }
     interface RfsSliderAnimatedItem {
@@ -105,6 +138,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLComponenteDeTesteElement extends Components.ComponenteDeTeste, HTMLStencilElement {
+    }
+    var HTMLComponenteDeTesteElement: {
+        prototype: HTMLComponenteDeTesteElement;
+        new (): HTMLComponenteDeTesteElement;
+    };
     interface HTMLRfsBadgeTitleElement extends Components.RfsBadgeTitle, HTMLStencilElement {
     }
     var HTMLRfsBadgeTitleElement: {
@@ -122,6 +161,12 @@ declare global {
     var HTMLRfsCarouselTxtItemElement: {
         prototype: HTMLRfsCarouselTxtItemElement;
         new (): HTMLRfsCarouselTxtItemElement;
+    };
+    interface HTMLRfsContactSectionElement extends Components.RfsContactSection, HTMLStencilElement {
+    }
+    var HTMLRfsContactSectionElement: {
+        prototype: HTMLRfsContactSectionElement;
+        new (): HTMLRfsContactSectionElement;
     };
     interface HTMLRfsFloatFooterElement extends Components.RfsFloatFooter, HTMLStencilElement {
     }
@@ -146,6 +191,18 @@ declare global {
     var HTMLRfsFooterElement: {
         prototype: HTMLRfsFooterElement;
         new (): HTMLRfsFooterElement;
+    };
+    interface HTMLRfsGenericSectionElement extends Components.RfsGenericSection, HTMLStencilElement {
+    }
+    var HTMLRfsGenericSectionElement: {
+        prototype: HTMLRfsGenericSectionElement;
+        new (): HTMLRfsGenericSectionElement;
+    };
+    interface HTMLRfsGenericSectionItemElement extends Components.RfsGenericSectionItem, HTMLStencilElement {
+    }
+    var HTMLRfsGenericSectionItemElement: {
+        prototype: HTMLRfsGenericSectionItemElement;
+        new (): HTMLRfsGenericSectionItemElement;
     };
     interface HTMLRfsHeaderElement extends Components.RfsHeader, HTMLStencilElement {
     }
@@ -195,6 +252,12 @@ declare global {
         prototype: HTMLRfsParallaxImageVerticalRepeatElement;
         new (): HTMLRfsParallaxImageVerticalRepeatElement;
     };
+    interface HTMLRfsProjectsSectionElement extends Components.RfsProjectsSection, HTMLStencilElement {
+    }
+    var HTMLRfsProjectsSectionElement: {
+        prototype: HTMLRfsProjectsSectionElement;
+        new (): HTMLRfsProjectsSectionElement;
+    };
     interface HTMLRfsSliderAnimatedElement extends Components.RfsSliderAnimated, HTMLStencilElement {
     }
     var HTMLRfsSliderAnimatedElement: {
@@ -220,13 +283,17 @@ declare global {
         new (): HTMLRfsTextBoxItemElement;
     };
     interface HTMLElementTagNameMap {
+        "componente-de-teste": HTMLComponenteDeTesteElement;
         "rfs-badge-title": HTMLRfsBadgeTitleElement;
         "rfs-carousel-txt": HTMLRfsCarouselTxtElement;
         "rfs-carousel-txt-item": HTMLRfsCarouselTxtItemElement;
+        "rfs-contact-section": HTMLRfsContactSectionElement;
         "rfs-float-footer": HTMLRfsFloatFooterElement;
         "rfs-float-header": HTMLRfsFloatHeaderElement;
         "rfs-float-header-item": HTMLRfsFloatHeaderItemElement;
         "rfs-footer": HTMLRfsFooterElement;
+        "rfs-generic-section": HTMLRfsGenericSectionElement;
+        "rfs-generic-section-item": HTMLRfsGenericSectionItemElement;
         "rfs-header": HTMLRfsHeaderElement;
         "rfs-intro": HTMLRfsIntroElement;
         "rfs-intro-btn": HTMLRfsIntroBtnElement;
@@ -235,6 +302,7 @@ declare global {
         "rfs-nav-item": HTMLRfsNavItemElement;
         "rfs-parallax-image": HTMLRfsParallaxImageElement;
         "rfs-parallax-image-vertical-repeat": HTMLRfsParallaxImageVerticalRepeatElement;
+        "rfs-projects-section": HTMLRfsProjectsSectionElement;
         "rfs-slider-animated": HTMLRfsSliderAnimatedElement;
         "rfs-slider-animated-item": HTMLRfsSliderAnimatedItemElement;
         "rfs-text-box": HTMLRfsTextBoxElement;
@@ -242,14 +310,26 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface ComponenteDeTeste {
+        "styleId"?: string;
+    }
     interface RfsBadgeTitle {
         "bgColor"?: string;
         "color"?: string;
         "styleId"?: string;
     }
     interface RfsCarouselTxt {
+        "styleId"?: string;
     }
     interface RfsCarouselTxtItem {
+        "styleId"?: string;
+    }
+    interface RfsContactSection {
+        "color"?: string;
+        "logoImg"?: string;
+        "profileImg"?: string;
+        "rtl"?: boolean;
+        "styleId"?: string;
     }
     interface RfsFloatFooter {
         "bgColor"?: string;
@@ -261,6 +341,7 @@ declare namespace LocalJSX {
     }
     interface RfsFloatHeader {
         "fixed"?: boolean;
+        "styleId"?: string;
     }
     interface RfsFloatHeaderItem {
         "bgColor"?: string;
@@ -276,6 +357,15 @@ declare namespace LocalJSX {
         "textGradientLeft"?: string;
         "textGradientRight"?: string;
     }
+    interface RfsGenericSection {
+        "bgColor"?: string;
+        "styleId"?: string;
+    }
+    interface RfsGenericSectionItem {
+        "color"?: string;
+        "image"?: string;
+        "styleId"?: string;
+    }
     interface RfsHeader {
         "bgColor"?: string;
         "fixed"?: boolean;
@@ -287,7 +377,6 @@ declare namespace LocalJSX {
     }
     interface RfsIntro {
         "anchor"?: string;
-        "image"?: void;
         "imgDesk"?: string;
         "imgMobile"?: string;
         "styleId"?: string;
@@ -326,6 +415,18 @@ declare namespace LocalJSX {
         "mobileImage"?: string;
         "styleId"?: string;
     }
+    interface RfsProjectsSection {
+        "bgBottom"?: string;
+        "bgProject"?: string;
+        "bgTop"?: string;
+        "descriptionColor"?: string;
+        "myLogo"?: string;
+        "project"?: string;
+        "projectColor"?: string;
+        "projectImage"?: string;
+        "rtl"?: boolean;
+        "styleId"?: string;
+    }
     interface RfsSliderAnimated {
     }
     interface RfsSliderAnimatedItem {
@@ -340,13 +441,17 @@ declare namespace LocalJSX {
         "titleColor"?: string;
     }
     interface IntrinsicElements {
+        "componente-de-teste": ComponenteDeTeste;
         "rfs-badge-title": RfsBadgeTitle;
         "rfs-carousel-txt": RfsCarouselTxt;
         "rfs-carousel-txt-item": RfsCarouselTxtItem;
+        "rfs-contact-section": RfsContactSection;
         "rfs-float-footer": RfsFloatFooter;
         "rfs-float-header": RfsFloatHeader;
         "rfs-float-header-item": RfsFloatHeaderItem;
         "rfs-footer": RfsFooter;
+        "rfs-generic-section": RfsGenericSection;
+        "rfs-generic-section-item": RfsGenericSectionItem;
         "rfs-header": RfsHeader;
         "rfs-intro": RfsIntro;
         "rfs-intro-btn": RfsIntroBtn;
@@ -355,6 +460,7 @@ declare namespace LocalJSX {
         "rfs-nav-item": RfsNavItem;
         "rfs-parallax-image": RfsParallaxImage;
         "rfs-parallax-image-vertical-repeat": RfsParallaxImageVerticalRepeat;
+        "rfs-projects-section": RfsProjectsSection;
         "rfs-slider-animated": RfsSliderAnimated;
         "rfs-slider-animated-item": RfsSliderAnimatedItem;
         "rfs-text-box": RfsTextBox;
@@ -365,13 +471,17 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "componente-de-teste": LocalJSX.ComponenteDeTeste & JSXBase.HTMLAttributes<HTMLComponenteDeTesteElement>;
             "rfs-badge-title": LocalJSX.RfsBadgeTitle & JSXBase.HTMLAttributes<HTMLRfsBadgeTitleElement>;
             "rfs-carousel-txt": LocalJSX.RfsCarouselTxt & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtElement>;
             "rfs-carousel-txt-item": LocalJSX.RfsCarouselTxtItem & JSXBase.HTMLAttributes<HTMLRfsCarouselTxtItemElement>;
+            "rfs-contact-section": LocalJSX.RfsContactSection & JSXBase.HTMLAttributes<HTMLRfsContactSectionElement>;
             "rfs-float-footer": LocalJSX.RfsFloatFooter & JSXBase.HTMLAttributes<HTMLRfsFloatFooterElement>;
             "rfs-float-header": LocalJSX.RfsFloatHeader & JSXBase.HTMLAttributes<HTMLRfsFloatHeaderElement>;
             "rfs-float-header-item": LocalJSX.RfsFloatHeaderItem & JSXBase.HTMLAttributes<HTMLRfsFloatHeaderItemElement>;
             "rfs-footer": LocalJSX.RfsFooter & JSXBase.HTMLAttributes<HTMLRfsFooterElement>;
+            "rfs-generic-section": LocalJSX.RfsGenericSection & JSXBase.HTMLAttributes<HTMLRfsGenericSectionElement>;
+            "rfs-generic-section-item": LocalJSX.RfsGenericSectionItem & JSXBase.HTMLAttributes<HTMLRfsGenericSectionItemElement>;
             "rfs-header": LocalJSX.RfsHeader & JSXBase.HTMLAttributes<HTMLRfsHeaderElement>;
             "rfs-intro": LocalJSX.RfsIntro & JSXBase.HTMLAttributes<HTMLRfsIntroElement>;
             "rfs-intro-btn": LocalJSX.RfsIntroBtn & JSXBase.HTMLAttributes<HTMLRfsIntroBtnElement>;
@@ -380,6 +490,7 @@ declare module "@stencil/core" {
             "rfs-nav-item": LocalJSX.RfsNavItem & JSXBase.HTMLAttributes<HTMLRfsNavItemElement>;
             "rfs-parallax-image": LocalJSX.RfsParallaxImage & JSXBase.HTMLAttributes<HTMLRfsParallaxImageElement>;
             "rfs-parallax-image-vertical-repeat": LocalJSX.RfsParallaxImageVerticalRepeat & JSXBase.HTMLAttributes<HTMLRfsParallaxImageVerticalRepeatElement>;
+            "rfs-projects-section": LocalJSX.RfsProjectsSection & JSXBase.HTMLAttributes<HTMLRfsProjectsSectionElement>;
             "rfs-slider-animated": LocalJSX.RfsSliderAnimated & JSXBase.HTMLAttributes<HTMLRfsSliderAnimatedElement>;
             "rfs-slider-animated-item": LocalJSX.RfsSliderAnimatedItem & JSXBase.HTMLAttributes<HTMLRfsSliderAnimatedItemElement>;
             "rfs-text-box": LocalJSX.RfsTextBox & JSXBase.HTMLAttributes<HTMLRfsTextBoxElement>;

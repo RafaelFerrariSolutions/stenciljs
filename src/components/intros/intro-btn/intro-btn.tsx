@@ -1,14 +1,15 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core'
 import $ from 'jquery'
+import { uuid  } from '../../../utils/utils'
 
 
 @Component({
   tag: 'rfs-intro-btn',
   styleUrl: 'intro-btn.scss',
 })
-export class IntroBtnComponent {
-  @Prop() target: string = null;
+export class IntroBtn {
   @Prop() styleId: string
+  @Prop() target: string = null;
   @Prop() color: string = "black"
   @Prop() bgColor: string = "transparent"
 
@@ -36,18 +37,9 @@ export class IntroBtnComponent {
     }
   }
 
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-        let random = (dateTime + Math.random() * 16) % 16 | 0;
-        dateTime = Math.floor(dateTime / 16);
-        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
-  }
+    this.styleId = uuid()
+    }
 
   componentDidLoad() {
     let element = $(`#${this.styleId}`)
@@ -57,9 +49,11 @@ export class IntroBtnComponent {
 
   render() {
     return (
-      <a href={this.renderTarget()} id={this.styleId} class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
+      <Host id={this.styleId}>
+      <a href={this.renderTarget()}  class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
         <slot></slot>
       </a>
+      </Host>
     );
   }
 

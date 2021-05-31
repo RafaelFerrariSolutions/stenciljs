@@ -1,4 +1,4 @@
-import { Component, Host, Prop,  h } from '@stencil/core';
+import { Component, Host, Prop,  h } from '@stencil/core'
 import $ from 'jquery'
 
 @Component({

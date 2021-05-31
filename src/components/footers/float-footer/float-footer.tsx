@@ -1,11 +1,12 @@
 import { Component, Host, Prop, h } from '@stencil/core'
 import $ from 'jquery'
+import { uuid  } from '../../../utils/utils'
 
 @Component({
   tag: 'rfs-float-footer',
   styleUrl: 'float-footer.scss',
 })
-export class FloatFooterComponent {
+export class FloatFooter {
   @Prop() styleId: string;
   @Prop() color: string = '#f524bf';
   @Prop() textGradientLeft: string = '#008cb0';
@@ -13,14 +14,16 @@ export class FloatFooterComponent {
   @Prop() bgColor: string = 'rgba(0, 0, 0, .75)';
   @Prop() radius: number = 5;
 
-  componentDidLoad() {
-    if (!this.styleId) return
+  componentWillLoad() {
+    this.styleId = uuid()
+  }
 
+  componentDidLoad() {
     let element = $(`#${this.styleId}`)
-    element.setProperty('--text-color', this.color)
-    element.setProperty('--text-gradient-left', this.textGradientLeft)
-    element.setProperty('--text-gradient-right', this.textGradientRight)
-    element.setProperty('--background-color', this.bgColor)
+    element.css('--text-color', this.color)
+    element.css('--text-gradient-left', this.textGradientLeft)
+    element.css('--text-gradient-right', this.textGradientRight)
+    element.css('--background-color', this.bgColor)
   }
 
   handleRadius(): string {

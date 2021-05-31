@@ -1,0 +1,111 @@
+rfs-projects-section {
+    --project-color: "";
+    --description-color: "";
+    --bg-project: "";
+    --bg-top: "";
+    --bg-bottom: "";
+    --my-logo: "";
+    &>div {
+        background: linear-gradient(to bottom, var(--bg-top) 60%, var(--bg-bottom) 0);
+        &>div {
+            background-image: var(--my-logo);
+            background-size: 25% 45%;
+            background-repeat: no-repeat;
+            background-position-x: 5%;
+            background-position-y: bottom;
+            .project {
+                margin-top: 9vh;
+                span {
+                    position: absolute;
+                    left: 0;
+                    padding-left: 2vw;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-right: 10px;
+                    border-radius: 0 5px 5px 0;
+                    color: var(--project-color);
+                    background-color: var(--bg-project);
+                }
+            }
+            img {
+                width: 65vw;
+                margin-top: 4vh;
+            }
+            .description {
+                p {
+                    color: var(--description-color);
+                    font-size: .9em;
+                    font-weight: 600;
+                    margin-left: 20vw;
+                    text-align: right;
+                }
+            }
+            @media(min-width: 720px) {
+                .project {
+                    margin-top: 25vh;
+                    span {
+                        width: 115%;
+                        padding-left: inherit;
+                        padding-right: inherit;
+                        text-align: right;
+                        font-size: 2rem;
+                        border-radius: 0 10px 10px 0;
+                    }
+                }
+                img {
+                    width: 55vw;
+                    margin-top: 7vh;
+                    margin-right: 5vw;
+                }
+                .description {
+                    p {
+                        font-size: 1.8rem;
+                        margin-right: 5vw;
+                        margin-top: 5vh;
+                        margin-bottom: 5vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+rfs-projects-section.rtl {
+    &>div {
+        &>div {
+            background-position-x: 95%;
+            .project {
+                span {
+                    right: 0;
+                    padding-right: 2vw;
+                    border-radius: 5px 0 0 5px;
+                }
+            }
+            .description {
+                p {
+                    margin-left: 0;
+                    margin-right: 20vw;
+                    text-align: left;
+                }
+            }
+            @media(min-width: 720px) {
+                .project {
+                    span {
+                        margin-left: -15%;
+                        text-align: left;
+                        border-radius: 10px 0 0 10px;
+                    }
+                }
+                img {
+                    margin-left: 5vw;
+                    margin-right: 0;
+                }
+                .description {
+                    p {
+                        margin-left: 5vw;
+                    }
+                }
+            }
+        }
+    }
+}

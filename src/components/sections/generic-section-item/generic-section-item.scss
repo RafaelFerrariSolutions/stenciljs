@@ -1,0 +1,18 @@
+rfs-generic-section-item {
+    --image: '';
+    --color: '';
+    color: var(--color);
+    .image {
+        background-image: var(--image);
+        background-size: cover;
+        background-position: center;
+        width: 30vw;
+        height: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        @media(min-width: 720px) {
+            width: 10vw;
+            height: 10vw;
+        }
+    }
+}

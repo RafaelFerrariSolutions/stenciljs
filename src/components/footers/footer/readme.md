@@ -7,9 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                                                                                                                                                                        | Type   | Default     |
-| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ----------- |
-| `color`  | --        | Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo --text-color: para definir cor sólida | `void` | `undefined` |
+| Property            | Attribute             | Description | Type     | Default     |
+| ------------------- | --------------------- | ----------- | -------- | ----------- |
+| `bgColor`           | `bg-color`            |             | `string` | `'#000'`    |
+| `color`             | `color`               |             | `string` | `'#f524bf'` |
+| `styleId`           | `style-id`            |             | `string` | `undefined` |
+| `textGradientLeft`  | `text-gradient-left`  |             | `string` | `'#008cb0'` |
+| `textGradientRight` | `text-gradient-right` |             | `string` | `'#009848'` |
 
 
 ----------------------------------------------

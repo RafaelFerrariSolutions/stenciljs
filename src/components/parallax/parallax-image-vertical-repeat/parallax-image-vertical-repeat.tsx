@@ -1,5 +1,6 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core'
 import $ from 'jquery'
+import { uuid  } from '../../../utils/utils'
 
 
 @Component({
@@ -12,18 +13,9 @@ export class ParallaxImageVerticalRepeat {
   @Prop() deskImage: string = "";
   @Prop() mobileImage: string = "";
 
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-        let random = (dateTime + Math.random() * 16) % 16 | 0;
-        dateTime = Math.floor(dateTime / 16);
-        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
-  }
+    this.styleId = uuid()
+    }
 
   componentDidLoad() {
     let element = $(`#${this.styleId}`)
@@ -33,10 +25,11 @@ export class ParallaxImageVerticalRepeat {
 
   render() {
     return (
-     
+      <Host id={this.styleId}>
         <div class="parallax-image" id={this.styleId}>
           <slot></slot>
         </div>
+      </Host>
     
     );
   }

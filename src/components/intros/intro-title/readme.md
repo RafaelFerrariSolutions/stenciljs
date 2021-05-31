@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                        | Type     | Default |
-| ---------- | ----------- | ---------------------------------- | -------- | ------- |
-| `fontSize` | `font-size` | Define o tamanho do texto (1 a 5). | `number` | `5`     |
+| Property   | Attribute   | Description | Type     | Default     |
+| ---------- | ----------- | ----------- | -------- | ----------- |
+| `color`    | `color`     |             | `string` | `"#000"`    |
+| `fontSize` | `font-size` |             | `number` | `5`         |
+| `styleId`  | `style-id`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------

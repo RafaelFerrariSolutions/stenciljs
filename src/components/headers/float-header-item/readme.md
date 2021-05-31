@@ -7,9 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description               | Type     | Default |
-| -------- | --------- | ------------------------- | -------- | ------- |
-| `target` | `target`  | Define a âncora do botão. | `string` | `'#'`   |
+| Property       | Attribute        | Description | Type     | Default                      |
+| -------------- | ---------------- | ----------- | -------- | ---------------------------- |
+| `bgColor`      | `bg-color`       |             | `string` | `"rgba(255, 255, 255, .15)"` |
+| `bgColorHover` | `bg-color-hover` |             | `string` | `undefined`                  |
+| `color`        | `color`          |             | `string` | `"white"`                    |
+| `styleId`      | `style-id`       |             | `string` | `undefined`                  |
+| `target`       | `target`         |             | `string` | `'#'`                        |
 
 
 ----------------------------------------------

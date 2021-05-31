@@ -1,31 +1,22 @@
 import { Component, Prop, Host, h } from '@stencil/core';
 import $ from 'jquery'
+import { uuid  } from '../../../utils/utils'
 
 @Component({
   tag: 'rfs-intro',
   styleUrl: 'intro.scss',
   assetsDirs: ['assets'],
 })
-export class IntroComponent {
-  @Prop() image: void;
+export class Intro {
+  @Prop() styleId: string
   @Prop() anchor: string = 'intro';
-  @Prop() styleId: string;
   @Prop() imgDesk: string = "";
   @Prop() imgMobile: string = "";
 
 
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-        let random = (dateTime + Math.random() * 16) % 16 | 0;
-        dateTime = Math.floor(dateTime / 16);
-        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
-  }
+    this.styleId = uuid()
+    }
 
   componentDidLoad() {
     let element = $(`#${this.styleId}`)

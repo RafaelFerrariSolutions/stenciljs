@@ -1,11 +1,22 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, Host, h, } from '@stencil/core'
+import $ from 'jquery'
+import { uuid, slowScroll  } from '../../../utils/utils'
 
 @Component({
   tag: 'rfs-float-header',
   styleUrl: 'float-header.scss',
 })
-export class FloatHeaderComponent {
-  @Prop() fixed: boolean = false;
+export class FloatHeader {
+  @Prop() styleId: string
+  @Prop() fixed: boolean = false
+
+  componentWillLoad() {
+    this.styleId = uuid()
+  }
+
+  componentDidLoad() {
+    slowScroll($)
+  }
 
   fixednav() {
     if (!this.fixed) {
@@ -28,11 +39,13 @@ export class FloatHeaderComponent {
   render() {
     this.fixednav()
     return (
-      <nav class="navbar fixed-top navbar-expand-sm ">
-        <ul class="navbar-nav row">
-          <slot></slot>
-        </ul>
-      </nav>
-    );
+      <Host id={this.styleId }>
+        <nav class="navbar fixed-top navbar-expand-sm ">
+          <ul class="navbar-nav row">
+            <slot></slot>
+          </ul>
+        </nav>
+      </Host>
+    )
   }
 }

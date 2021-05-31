@@ -4,8 +4,7 @@ import { Component, Host, h } from '@stencil/core';
   tag: 'rfs-slider-animated-item',
   styleUrl: 'slider-animated-item.scss',
 })
-export class SliderAnimatedItemComponent {
-
+export class SliderAnimatedItem {
   render() {
     return (
       <Host>

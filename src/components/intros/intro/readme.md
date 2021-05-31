@@ -7,10 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                    | Type     | Default     |
-| -------- | --------- | ------------------------------------------------------------------------------ | -------- | ----------- |
-| `anchor` | `anchor`  | Define a âncora do elemento atual.                                             | `string` | `'intro'`   |
-| `image`  | --        | Use as variáveis CSS --image e --image-mobile para alterar o background-image. | `void`   | `undefined` |
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+| `anchor`    | `anchor`     |             | `string` | `'intro'`   |
+| `image`     | --           |             | `void`   | `undefined` |
+| `imgDesk`   | `img-desk`   |             | `string` | `""`        |
+| `imgMobile` | `img-mobile` |             | `string` | `""`        |
+| `styleId`   | `style-id`   |             | `string` | `undefined` |
 
 
 ----------------------------------------------

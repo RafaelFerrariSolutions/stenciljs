@@ -1,27 +1,19 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core'
 import $ from 'jquery'
+import { uuid  } from '../../../utils/utils'
 
 @Component({
   tag: 'rfs-intro-title',
   styleUrl: 'intro-title.scss',
 })
-export class IntroTitleComponent {
-  @Prop() fontSize: number = 5;
+export class IntroTitle {
   @Prop() styleId: string
+  @Prop() fontSize: number = 5;
   @Prop() color: string = "#000"
 
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-        let random = (dateTime + Math.random() * 16) % 16 | 0;
-        dateTime = Math.floor(dateTime / 16);
-        return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16);
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
-  }
+    this.styleId = uuid()
+    }
 
   componentDidLoad() {
     let element = $(`#${this.styleId}`)
@@ -39,9 +31,11 @@ export class IntroTitleComponent {
 
   render() {
     return (
-      <h1 class={this.renderClasses()} id={this.styleId}>
+      <Host id={this.styleId}>
+      <h1 class={this.renderClasses()}>
         <slot></slot>
       </h1>
+      </Host>
     );
   }
 

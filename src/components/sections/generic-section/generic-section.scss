@@ -1,0 +1,6 @@
+rfs-generic-section {
+    --bgcolor: "";
+    &>section {
+        background-color: var(--bgcolor);
+    }
+}

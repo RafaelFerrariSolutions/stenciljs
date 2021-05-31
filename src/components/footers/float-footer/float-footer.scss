@@ -9,10 +9,10 @@ rfs-float-footer {
         font-weight: 600;
         margin-left: auto;
         margin-right: auto;
-        width: 20em;
+        width: 20rem;
         background-color: var(--background-color);
         position: fixed;
-        bottom: 2em;
+        bottom: 1rem;
         left: calc(50% - 10em);
         a,
         a:hover {
@@ -23,7 +23,7 @@ rfs-float-footer {
             -webkit-background-clip: text;
             -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 1em;
+            font-size: 1rem;
         }
     }
     &.radius-1>div {

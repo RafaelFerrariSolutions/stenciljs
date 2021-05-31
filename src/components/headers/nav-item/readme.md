@@ -7,11 +7,15 @@
 
 ## Properties
 
-| Property | Attribute | Description                                | Type      | Default |
-| -------- | --------- | ------------------------------------------ | --------- | ------- |
-| `action` | `action`  | Define se é um botão de ação.              | `boolean` | `false` |
-| `active` | `active`  | Define se o nav-item está ativo no momento | `boolean` | `false` |
-| `target` | `target`  | Define a âncora do botão.                  | `string`  | `null`  |
+| Property            | Attribute             | Description | Type      | Default     |
+| ------------------- | --------------------- | ----------- | --------- | ----------- |
+| `action`            | `action`              |             | `boolean` | `false`     |
+| `actionButtonColor` | `action-button-color` |             | `string`  | `"white"`   |
+| `active`            | `active`              |             | `boolean` | `false`     |
+| `color`             | `color`               |             | `string`  | `"white"`   |
+| `effectColor`       | `effect-color`        |             | `string`  | `"#f8224"`  |
+| `styleId`           | `style-id`            |             | `string`  | `undefined` |
+| `target`            | `target`              |             | `string`  | `null`      |
 
 
 ----------------------------------------------

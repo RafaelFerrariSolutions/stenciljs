@@ -7,10 +7,14 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                                                                                                                                                                                    | Type     | Default     |
-| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| `color`  | --        | Variáveis CSS --text-gradient-left para definir a cor do lado esquerdo do texto --text-gradient-right para definir a cor lado direito do text --background-color para definir a cor de fundo, usar RGBA  --text-color: para definir cor sólida | `void`   | `undefined` |
-| `radius` | `radius`  | Define o quão arrendodado será. Escolher entre 1 e 5                                                                                                                                                                                           | `number` | `5`         |
+| Property            | Attribute             | Description | Type     | Default                |
+| ------------------- | --------------------- | ----------- | -------- | ---------------------- |
+| `bgColor`           | `bg-color`            |             | `string` | `'rgba(0, 0, 0, .75)'` |
+| `color`             | `color`               |             | `string` | `'#f524bf'`            |
+| `radius`            | `radius`              |             | `number` | `5`                    |
+| `styleId`           | `style-id`            |             | `string` | `undefined`            |
+| `textGradientLeft`  | `text-gradient-left`  |             | `string` | `'#008cb0'`            |
+| `textGradientRight` | `text-gradient-right` |             | `string` | `'#009848'`            |
 
 
 ----------------------------------------------
