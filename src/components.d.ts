@@ -136,6 +136,14 @@ export namespace Components {
         "styleId": string;
         "titleColor": string;
     }
+    interface RfsWhatsButton {
+        "get": string;
+        "message": string;
+        "phoneNumber": string;
+        "styleId": string;
+        "urlConcatened": string;
+        "urlDefault": string;
+    }
 }
 declare global {
     interface HTMLComponenteDeTesteElement extends Components.ComponenteDeTeste, HTMLStencilElement {
@@ -282,6 +290,12 @@ declare global {
         prototype: HTMLRfsTextBoxItemElement;
         new (): HTMLRfsTextBoxItemElement;
     };
+    interface HTMLRfsWhatsButtonElement extends Components.RfsWhatsButton, HTMLStencilElement {
+    }
+    var HTMLRfsWhatsButtonElement: {
+        prototype: HTMLRfsWhatsButtonElement;
+        new (): HTMLRfsWhatsButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "componente-de-teste": HTMLComponenteDeTesteElement;
         "rfs-badge-title": HTMLRfsBadgeTitleElement;
@@ -307,6 +321,7 @@ declare global {
         "rfs-slider-animated-item": HTMLRfsSliderAnimatedItemElement;
         "rfs-text-box": HTMLRfsTextBoxElement;
         "rfs-text-box-item": HTMLRfsTextBoxItemElement;
+        "rfs-whats-button": HTMLRfsWhatsButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -440,6 +455,14 @@ declare namespace LocalJSX {
         "styleId"?: string;
         "titleColor"?: string;
     }
+    interface RfsWhatsButton {
+        "get"?: string;
+        "message"?: string;
+        "phoneNumber"?: string;
+        "styleId"?: string;
+        "urlConcatened"?: string;
+        "urlDefault"?: string;
+    }
     interface IntrinsicElements {
         "componente-de-teste": ComponenteDeTeste;
         "rfs-badge-title": RfsBadgeTitle;
@@ -465,6 +488,7 @@ declare namespace LocalJSX {
         "rfs-slider-animated-item": RfsSliderAnimatedItem;
         "rfs-text-box": RfsTextBox;
         "rfs-text-box-item": RfsTextBoxItem;
+        "rfs-whats-button": RfsWhatsButton;
     }
 }
 export { LocalJSX as JSX };
@@ -495,6 +519,7 @@ declare module "@stencil/core" {
             "rfs-slider-animated-item": LocalJSX.RfsSliderAnimatedItem & JSXBase.HTMLAttributes<HTMLRfsSliderAnimatedItemElement>;
             "rfs-text-box": LocalJSX.RfsTextBox & JSXBase.HTMLAttributes<HTMLRfsTextBoxElement>;
             "rfs-text-box-item": LocalJSX.RfsTextBoxItem & JSXBase.HTMLAttributes<HTMLRfsTextBoxItemElement>;
+            "rfs-whats-button": LocalJSX.RfsWhatsButton & JSXBase.HTMLAttributes<HTMLRfsWhatsButtonElement>;
         }
     }
 }
