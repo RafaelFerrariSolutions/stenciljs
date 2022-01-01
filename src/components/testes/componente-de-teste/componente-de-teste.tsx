@@ -1,25 +1,15 @@
-import { Component, Host, Prop, h } from '@stencil/core'
-// import $ from 'jquery'
-import { uuid, teste  } from '../../../utils/utils'
+import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'componente-de-teste',
-  styleUrl: 'componente-de-teste.scss',
+  styleUrl: 'componente-de-teste.css',
+  shadow: true,
 })
 export class ComponenteDeTeste {
-  @Prop() styleId: string
-
-  componentWillLoad() {
-    this.styleId = uuid()
-    }
-    componentDidLoad() {
-    // let element = $(`#${this.styleId}`)
-    }
 
   render() {
-    teste()
     return (
-      <Host id={this.styleId}>
+      <Host>
         <slot></slot>
       </Host>
     );

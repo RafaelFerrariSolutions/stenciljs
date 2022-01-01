@@ -1,0 +1,12 @@
+rfs-whats-button {
+    display: block;
+    position: fixed;
+    bottom: 60px;
+    right: 5px;
+    @media(min-width: 720px) {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 30px
+    }
+}

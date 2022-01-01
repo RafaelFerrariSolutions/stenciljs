@@ -1,5 +1,7 @@
 import { Component, Prop, h } from '@stencil/core'
-import $ from 'jquery';
+import $ from 'jquery'
+import { uuid  } from '../../../../utils/utils'
+
 
 @Component({
   tag: 'rfs-text-box',
@@ -17,17 +19,8 @@ export class TextBox {
     })
   }
 
-  uuid() {
-    let dateTime = new Date().getTime()
-    this.styleId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(item) {
-      let random = (dateTime + Math.random() * 16) % 16 | 0;
-      dateTime = Math.floor(dateTime / 16);
-      return (item == 'x' ? random : (random & 0x3 | 0x8)).toString(16)
-    })
-  }
-
   componentWillLoad() {
-    this.uuid()
+    this.styleId = uuid()
   }
 
   componentDidLoad() {

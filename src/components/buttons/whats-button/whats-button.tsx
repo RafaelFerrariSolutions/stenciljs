@@ -2,7 +2,7 @@ import { Component, Host, Prop, h } from '@stencil/core'
 
 @Component({
   tag: 'rfs-whats-button',
-  styleUrl: 'rfs-whats-button.css',
+  styleUrl: 'whats-button.scss',
 })
 export class RfsWhatsButton {
   @Prop() styleId: string;
@@ -13,7 +13,7 @@ export class RfsWhatsButton {
   @Prop() urlConcatened: string = '';
 
 
-  componentDidLoad() {
+  componentWillLoad() {
     {this.urlConcatened = this.urlDefault+this.phoneNumber+this.get+this.message}
     }
 
