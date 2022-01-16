@@ -8,7 +8,11 @@ import { uuid  } from '../../../../utils/utils'
 })
 export class ModalBox {
   @Prop() styleId: string
-  @Prop() bgColor: string = "transparent";
+  @Prop() bgColor: string = "#ffff" 
+  @Prop() color: string = "black" 
+  @Prop() titleColor: string = "#fff" 
+  @Prop() rangeColor: string = "#009688" 
+  @Prop() outTitleColor: string = "#black"
 
   
   componentWillLoad() {
@@ -16,31 +20,27 @@ export class ModalBox {
     }
   
   componentDidLoad() {
-           let element = $(`#${this.styleId}`)
-           element.css('backgroundColor', this.bgColor)
-            var modal = document.getElementById("myModal")
-            var btn = document.getElementById("myBtn")
-            var span = document.getElementById("close")
-            btn.onclick = function() {
-                modal.style.display = "block"
-            }
-            span.onclick = function() {
+          var modal = document.getElementById("id01")
+
+        document.getElementById('id01').onclick = function(){
+          if (event.target == modal) {
               modal.style.display = "none"
           }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none"
-                }
-            }
-    }
+        }
+       
+    let element = $(`#${this.styleId}`)
+    element.css('--primary-color', this.color)
+    element.css('--secondary-color', this.titleColor)
+    element.css('--bg-color', this.bgColor)
+    element.css('--range-color', this.rangeColor)
+    element.css('--out-title-color', this.outTitleColor)
+}
 
 
   render() {
     return (
-      <Host id={this.styleId}>
-      <slot>
-        
-        </slot>
+      <Host  id={this.styleId}>
+     
         </Host>
     );
   }

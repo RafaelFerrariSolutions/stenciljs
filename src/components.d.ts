@@ -93,14 +93,13 @@ export namespace Components {
     }
     interface RfsModalBox {
         "bgColor": string;
-        "styleId": string;
-    }
-    interface RfsModalBoxItem {
-        "bgColor": string;
-        "borderColor": string;
         "color": string;
+        "outTitleColor": string;
+        "rangeColor": string;
         "styleId": string;
         "titleColor": string;
+    }
+    interface RfsModalBoxItem {
     }
     interface RfsNavItem {
         "action": boolean;
@@ -436,14 +435,13 @@ declare namespace LocalJSX {
     }
     interface RfsModalBox {
         "bgColor"?: string;
-        "styleId"?: string;
-    }
-    interface RfsModalBoxItem {
-        "bgColor"?: string;
-        "borderColor"?: string;
         "color"?: string;
+        "outTitleColor"?: string;
+        "rangeColor"?: string;
         "styleId"?: string;
         "titleColor"?: string;
+    }
+    interface RfsModalBoxItem {
     }
     interface RfsNavItem {
         "action"?: boolean;
