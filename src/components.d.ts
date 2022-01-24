@@ -91,15 +91,13 @@ export namespace Components {
         "fontSize": number;
         "styleId": string;
     }
-    interface RfsModalBox {
+    interface RfsModalTextBox {
         "bgColor": string;
         "color": string;
         "outTitleColor": string;
         "rangeColor": string;
         "styleId": string;
         "titleColor": string;
-    }
-    interface RfsModalBoxItem {
     }
     interface RfsNavItem {
         "action": boolean;
@@ -251,17 +249,11 @@ declare global {
         prototype: HTMLRfsIntroTitleElement;
         new (): HTMLRfsIntroTitleElement;
     };
-    interface HTMLRfsModalBoxElement extends Components.RfsModalBox, HTMLStencilElement {
+    interface HTMLRfsModalTextBoxElement extends Components.RfsModalTextBox, HTMLStencilElement {
     }
-    var HTMLRfsModalBoxElement: {
-        prototype: HTMLRfsModalBoxElement;
-        new (): HTMLRfsModalBoxElement;
-    };
-    interface HTMLRfsModalBoxItemElement extends Components.RfsModalBoxItem, HTMLStencilElement {
-    }
-    var HTMLRfsModalBoxItemElement: {
-        prototype: HTMLRfsModalBoxItemElement;
-        new (): HTMLRfsModalBoxItemElement;
+    var HTMLRfsModalTextBoxElement: {
+        prototype: HTMLRfsModalTextBoxElement;
+        new (): HTMLRfsModalTextBoxElement;
     };
     interface HTMLRfsNavItemElement extends Components.RfsNavItem, HTMLStencilElement {
     }
@@ -334,8 +326,7 @@ declare global {
         "rfs-intro-btn": HTMLRfsIntroBtnElement;
         "rfs-intro-description": HTMLRfsIntroDescriptionElement;
         "rfs-intro-title": HTMLRfsIntroTitleElement;
-        "rfs-modal-box": HTMLRfsModalBoxElement;
-        "rfs-modal-box-item": HTMLRfsModalBoxItemElement;
+        "rfs-modal-text-box": HTMLRfsModalTextBoxElement;
         "rfs-nav-item": HTMLRfsNavItemElement;
         "rfs-parallax-image": HTMLRfsParallaxImageElement;
         "rfs-parallax-image-vertical-repeat": HTMLRfsParallaxImageVerticalRepeatElement;
@@ -433,15 +424,13 @@ declare namespace LocalJSX {
         "fontSize"?: number;
         "styleId"?: string;
     }
-    interface RfsModalBox {
+    interface RfsModalTextBox {
         "bgColor"?: string;
         "color"?: string;
         "outTitleColor"?: string;
         "rangeColor"?: string;
         "styleId"?: string;
         "titleColor"?: string;
-    }
-    interface RfsModalBoxItem {
     }
     interface RfsNavItem {
         "action"?: boolean;
@@ -512,8 +501,7 @@ declare namespace LocalJSX {
         "rfs-intro-btn": RfsIntroBtn;
         "rfs-intro-description": RfsIntroDescription;
         "rfs-intro-title": RfsIntroTitle;
-        "rfs-modal-box": RfsModalBox;
-        "rfs-modal-box-item": RfsModalBoxItem;
+        "rfs-modal-text-box": RfsModalTextBox;
         "rfs-nav-item": RfsNavItem;
         "rfs-parallax-image": RfsParallaxImage;
         "rfs-parallax-image-vertical-repeat": RfsParallaxImageVerticalRepeat;
@@ -545,8 +533,7 @@ declare module "@stencil/core" {
             "rfs-intro-btn": LocalJSX.RfsIntroBtn & JSXBase.HTMLAttributes<HTMLRfsIntroBtnElement>;
             "rfs-intro-description": LocalJSX.RfsIntroDescription & JSXBase.HTMLAttributes<HTMLRfsIntroDescriptionElement>;
             "rfs-intro-title": LocalJSX.RfsIntroTitle & JSXBase.HTMLAttributes<HTMLRfsIntroTitleElement>;
-            "rfs-modal-box": LocalJSX.RfsModalBox & JSXBase.HTMLAttributes<HTMLRfsModalBoxElement>;
-            "rfs-modal-box-item": LocalJSX.RfsModalBoxItem & JSXBase.HTMLAttributes<HTMLRfsModalBoxItemElement>;
+            "rfs-modal-text-box": LocalJSX.RfsModalTextBox & JSXBase.HTMLAttributes<HTMLRfsModalTextBoxElement>;
             "rfs-nav-item": LocalJSX.RfsNavItem & JSXBase.HTMLAttributes<HTMLRfsNavItemElement>;
             "rfs-parallax-image": LocalJSX.RfsParallaxImage & JSXBase.HTMLAttributes<HTMLRfsParallaxImageElement>;
             "rfs-parallax-image-vertical-repeat": LocalJSX.RfsParallaxImageVerticalRepeat & JSXBase.HTMLAttributes<HTMLRfsParallaxImageVerticalRepeatElement>;

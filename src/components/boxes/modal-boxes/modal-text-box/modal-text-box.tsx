@@ -3,16 +3,16 @@ import $ from 'jquery'
 import { uuid  } from '../../../../utils/utils'
 
 @Component({
-  tag: 'rfs-modal-box',
-  styleUrl: 'modal-box.scss',
+  tag: 'rfs-modal-text-box',
+  styleUrl: 'modal-text-box.scss',
 })
-export class ModalBox {
+export class ModalTextBox {
   @Prop() styleId: string
   @Prop() bgColor: string = "#ffff" 
   @Prop() color: string = "black" 
   @Prop() titleColor: string = "#fff" 
   @Prop() rangeColor: string = "#009688" 
-  @Prop() outTitleColor: string = "#black"
+  @Prop() outTitleColor: string = "black"
 
   
   componentWillLoad() {
@@ -20,13 +20,16 @@ export class ModalBox {
     }
   
   componentDidLoad() {
-          var modal = document.getElementById("id01")
+          var modal = document.getElementById("modalid")
 
-        document.getElementById('id01').onclick = function(){
-          if (event.target == modal) {
-              modal.style.display = "none"
+          document.getElementById('modalid').onclick=function(){
+            if (event.target == modal) {
+                modal.style.display = "none"
+            }
           }
-        }
+
+
+
        
     let element = $(`#${this.styleId}`)
     element.css('--primary-color', this.color)

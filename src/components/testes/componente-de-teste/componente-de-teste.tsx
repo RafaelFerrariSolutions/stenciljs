@@ -8,22 +8,13 @@ import { Component, Host, h } from '@stencil/core';
 export class ComponenteDeTeste {
   
 
-  render() {        
-        // document.getElementById('id01').onclick = function(){
-        //   console.log("entrou");
+  render() {       
+  console.log("entrou no componente de teste");
 
-        var modal = document.getElementById("id01")
-
-        document.getElementById('id01').onclick = function(){
-          if (event.target == modal) {
-              modal.style.display = "none"
-          }
-        }
-
-      
         
 
     return (
+      
       <Host>
        
       </Host>
